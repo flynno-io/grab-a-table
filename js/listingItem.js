@@ -1,9 +1,6 @@
 // js/ListingItem.js
 
 class ListingItem extends HTMLElement {
-	static css = `
-    h1 { color: purple; }
-    `
 	constructor() {
 		super()
 		this.attachShadow({ mode: "open" })
@@ -19,23 +16,27 @@ class ListingItem extends HTMLElement {
 		this.render()
 	}
 
+    static css = `
+        h2 { color: deeppink; }
+    `
+
 	render() {
 		this.shadowRoot.innerHTML = `
-        <style>${this.css}</style>
-        
-        <section>
-            <img src="${this.logo}" alt="restaurant photo"/>
-            <h2>${this.name}</h2>
-            <span class="type">${this.type}</span>
-            <span class="address">${this.address}</span>
-            <hr>
-            <p class="description">${this.description}</p>
-        </section>
+            <style>${ListingItem.css}</style>
+            
+            <section>
+                <img src="${this.logo}" alt="restaurant photo"/>
+                <h2>${this.name}</h2>
+                <p class="type">${this.type}</p>
+                <p class="address">${this.address}</p>
+                <p class="description">${this.description}</p>
+                <hr>
+            </section>
         `
 	}
 
 	connectedCallback() {
-		console.log(`Listing: ${this.name} has loaded.`)
+		this.render()
 	}
 }
 

@@ -1,19 +1,28 @@
 // js/homePage.js
 
 class HomePage extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.innerHTML = `
-      <style>
+	constructor() {
+		super()
+		this.attachShadow({ mode: "open" })
+	}
+
+	static css = `
         h1 { color: blue; }
-      </style>
-      <div>
-        <h1>Home Page</h1>
-        <p>Welcome to the Home Page!</p>
-      </div>
-    `;
-  }
+    `
+	render() {
+		this.shadowRoot.innerHTML = `
+            <style>${HomePage.css}</style>
+            
+            <section>
+                <h1>Home Page</h1>
+                <p>Welcome to the Home Page!</p>
+            </section>
+        `
+	}
+
+	connectedCallback() {
+		this.render()
+	}
 }
 
-customElements.define('home-page', HomePage);
+customElements.define("home-page", HomePage)
