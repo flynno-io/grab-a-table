@@ -3,8 +3,6 @@
 class ReservePage extends HTMLElement {
 	constructor() {
 		super()
-		// this.attachShadow({ mode: "open" })
-        // this.innerHTML = `<p>Loading data...</p>`;
 	}
 
     // Fetch data using async/await
