@@ -10,7 +10,19 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
-        <link rel="stylesheet" href="./css/style.css">
+        <!-- Google Font: Urbanist -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- External CSS Sheets -->
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/home-page.css">
+        <link rel="stylesheet" href="./css/reserve-page.css">
+        <link rel="stylesheet" href="./css/listing-page.css">
+        <link rel="stylesheet" href="./css/login-page.css">
+        <link rel="stylesheet" href="./css/signup-page.css">
+        <link rel="stylesheet" href="./css/confirmation-page.css">
+        <link rel="stylesheet" href="./css/global.css">
 		<title>Grab a Table</title>
 	</head>
 	<body>
@@ -18,10 +30,9 @@
 		<header class="container-fluid m-0 p-0">
 			<nav
 				class="navbar navbar-expand-md sticky-top"
-				style="background-color: cornflowerblue"
 			>
 				<div class="container-fluid">
-					<a class="nav-logo navbar-brand mb-0 h1 m-0 p-1" href="/">
+					<a class="nav-logo navbar-brand ml-sm-3 mb-0 h1 m-0 p-1" href="/">
 						<img
 							src="./assets/icons/reserved_black.png"
 							alt="Card with checkmark"
@@ -30,7 +41,7 @@
 						Grab a Table
 					</a>
 					<div class="nav-underline flex-xs-row m-0 p-0" id="navbarNav">
-						<div class="navbar-nav">
+						<div class="navbar-nav m-2">
 							<a class="nav-link active" id="nav-home" aria-current="page">Home</a>
 							<a class="nav-link" id="nav-reserve">Reserve</a>
 							<a class="nav-link" id="nav-login">Login</a>
@@ -79,5 +90,6 @@
 		<script defer src="js/listingItem.js"></script>
 		<script defer src="js/listingPage.js"></script>
 		<script defer src="js/confirmationPage.js"></script>
+		<script defer src="js/notFoundPage.js"></script>
 	</body>
 </html>
