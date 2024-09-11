@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -6,7 +6,8 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
-}
+} */
+ 
 .container {
     background-color: white;
     padding: 20px;
