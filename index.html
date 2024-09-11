@@ -10,42 +10,28 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
+        <link rel="stylesheet" href="./css/style.css">
 		<title>Grab a Table</title>
 	</head>
 	<body>
 		<!-- Navigation -->
-		<header class="m-0">
+		<header class="container-fluid m-0 p-0">
 			<nav
 				class="navbar navbar-expand-md sticky-top"
 				style="background-color: cornflowerblue"
 			>
 				<div class="container-fluid">
-					<a class="navbar-brand mb-0 h1" href="/">
+					<a class="nav-logo navbar-brand mb-0 h1 m-0 p-1" href="/">
 						<img
-							src="./assets/icons/dinner-table.png"
-							alt="Logo"
-							width="30"
-							height="30"
-							class="d-inline-block align-text-top"
+							src="./assets/icons/reserved_black.png"
+							alt="Card with checkmark"
+							class="d-inline-block align-text-center"
 						/>
-						GrabATable
+						Grab a Table
 					</a>
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarNav"
-						aria-controls="navbarNav"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
+					<div class="nav-underline flex-xs-row m-0 p-0" id="navbarNav">
 						<div class="navbar-nav">
-							<a class="nav-link active" id="nav-home" aria-current="page"
-								>Home</a
-							>
+							<a class="nav-link active" id="nav-home" aria-current="page">Home</a>
 							<a class="nav-link" id="nav-reserve">Reserve</a>
 							<a class="nav-link" id="nav-login">Login</a>
 							<a class="nav-link" id="nav-signup">Sign Up</a>
@@ -55,12 +41,14 @@
 			</nav>
 		</header>
 
-		<main class="m-0 p-0">
+		<main class="container m-0 p-0">
 			<!-- Container where pages will be swapped -->
-			<div id="page-container" class="m-0 p-0"></div>
+			<div id="page-container" class="container m-0 p-0"></div>
 		</main>
 
-		<footer>Footer</footer>
+		<footer class="container m-0 p-0">
+            Footer <!-- <a href="https://www.flaticon.com/free-icons/reservation" title="reservation icons">Reservation icons created by RIkas Dzihab - Flaticon</a> -->
+        </footer>
 
 		<!-- Bootstrap JS for dropdowns, popovers, and/or tooltips -->
 		<script
