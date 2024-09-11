@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		pageContainer.appendChild(pageElement) // Append the new page to the container
 	}
 
-    // FIXME: Bootstrap issue with add/removing 'active' class
     // Update which nav link is active
 	function addActiveClass(target) {
 		target.classList.add("active")
@@ -23,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
         currentActiveTab = target
 	}
 
-    // FIXME: take control of the refresh and hard refresh
     function updateURL(path, id=null) {
         const getBaseURL = () => {
             const protocol = window.location.protocol
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const baseURL = getBaseURL()
         window.history.pushState({},'', `${baseURL}/${path}`)
     }
-    updateURL('home')
+
 
 	// Event listeners for navigation buttons
 	document.getElementById("nav-home").addEventListener("click", (e) => {
@@ -55,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		loadPage("login-page")
         updateURL("login")
 	})
-	document.getElementById("nav-signup").addEventListener("click", (e) => {
+    document.getElementById("nav-signup").addEventListener("click", (e) => {
         e.preventDefault()
 		addActiveClass(e.target)
 		loadPage("signup-page")
@@ -64,11 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// TODO: identify how to load the Confirm page after clicking 'submit' on reserve form
 
-	// Load the default page (Home) on initial load
+	// Load the default page (Home) on initial load and update the URL path to '/home'
 	loadPage("home-page")
+    updateURL('home')
 })
 
 document.addEventListener("beforeunload", (event) => {
-
+    event.preventDefault()
 });
 

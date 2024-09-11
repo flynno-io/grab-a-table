@@ -3,8 +3,6 @@
 class HomePage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
-        // this.heroImage = getAttribute('hero')
 	}
 
 	static css = `
@@ -12,11 +10,10 @@ class HomePage extends HTMLElement {
     `
     
 	render() {
-		this.shadowRoot.innerHTML = `
+		this.innerHTML = `
             <style>${HomePage.css}</style>
             
             <section>
-                <img src=${this.heroImage}
                 <h1>Home Page</h1>
                 <p>Welcome to the Home Page!</p>
             </section>
