@@ -10,7 +10,7 @@ const loginTab = document.getElementById("nav-login")
 const signupTab = document.getElementById("nav-signup")
 
 // Keep track of the tab with the 'active' class for updating the UI on click
-let currentActiveTab
+let currentActiveTab = document.querySelector(".active")
 
 function navigateToHash(hash) {
 	switch (hash) {
@@ -57,7 +57,7 @@ function loadPage(page, id=null) {
             updateBrowserHistory("signup")
             break
         case 'confirmation':
-            addActiveClass()
+            addActiveClass("reserve")
             appendPageToContainer("confirmation-page")
             updateURL("confirmation")
             updateBrowserHistory("confirmation")
@@ -85,16 +85,17 @@ function appendPageToContainer(page) {
 
 // Update which nav link is active
 function addActiveClass(target=null) {
+    // Do nothing when the active tab is selected
     if (currentActiveTab === target) { return }
-    
-    if (!target) {
-        currentActiveTab.classList.remove("active") // FIXME: is this deleting the home tab active class on first load?
+
+    // Removes the active tab when a page is not found (404)
+    if (!target) { 
+        currentActiveTab.classList.remove("active")
         return
     }
-    // TODO: list all conditions and think through best implementation to meet all needs.
-	target.classList.add("active")
-	currentActiveTab.classList.remove("active")
-	currentActiveTab = target
+    target.classList.add("active")
+    currentActiveTab.classList.remove("active")
+    currentActiveTab = target
 }
 
 function updateURL(path, id = null) {
@@ -112,6 +113,7 @@ function capitalize(word) {
     return word.substring(0, 1).toUpperCase() + word.substring(1).toLowerCase();
 }
 
+// Enables the normal 'back' button functionality
 function updateBrowserHistory(page) {
     window.history.pushState({page: page}, capitalize(page), `#/${page}`);
 }
@@ -122,8 +124,8 @@ window.addEventListener("load", () => {
 		// Process the hash (e.g., navigate to the correct path)
 		navigateToHash(hash)
 	} else {
-		// Default to a home or fallback route if there's no hash
-        addActiveClass(homeTab)
+		// Default to 'Home' or fallback route if there's no hash
+        currentActiveTab = homeTab
 		navigateToHash("#/home")
 	}
 })
