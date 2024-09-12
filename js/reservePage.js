@@ -3,8 +3,8 @@
 class ReservePage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
-        this.shadowRoot.innerHTML = `<p>Loading data...</p>`;
+		// this.attachShadow({ mode: "open" })
+        this.innerHTML = `<p>Loading data...</p>`;
 	}
 
     // Fetch data using async/await
@@ -26,15 +26,15 @@ class ReservePage extends HTMLElement {
     // Render the component based on fetched data
     render(data) {
         const listings = data.listings
-        this.shadowRoot.innerHTML = `
-        <style>${ReservePage.css}</style>
+        // this.innerHTML = `
+        // <style>${ReservePage.css}</style>
 
-        <section>
-            <h1>Reserve a table</h1>
-            <p>Click on a restaurant and 'reserve a table'</p>
-            <div id="target"></div>
-        </section>
-        `
+        // <section>
+        //     <h1>Reserve a table</h1>
+        //     <p>Click on a restaurant and 'reserve a table'</p>
+        //     <div id="target"></div>
+        // </section>
+        // `
 
         // get the target element to append listings to
 		const listingsEl = this.shadowRoot.querySelector("#target")
@@ -56,7 +56,7 @@ class ReservePage extends HTMLElement {
 
     // Handle errors gracefully
     renderError(error) {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
         <div>
             <h2>Error Loading Data</h2>
             <p>${error}</p>
@@ -66,13 +66,22 @@ class ReservePage extends HTMLElement {
 
 	async connectedCallback() {
         // get listings from 'listings.json' file
-        try {
-            const data = await this.fetchData();
-            this.render(data);
-        } catch (error) {
-            this.renderError(error);
-        }
-	}
+        this.innerHTML = `
+        <style>${ReservePage.css}</style>
+
+        <section>
+            <h1>Reserve a table</h1>
+            <p>Click on a restaurant and 'reserve a table'</p>
+            <div id="target"></div>
+        </section>
+        `
+    //     try {
+    //         const data = await this.fetchData();
+    //         this.render(data);
+    //     } catch (error) {
+    //         this.renderError(error);
+    //     }
+	// }
 
 
 }

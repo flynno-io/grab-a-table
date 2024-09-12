@@ -3,8 +3,8 @@
 class ListingItem extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
-        this.shadowRoot.innerHTML = `<p>Loading data...</p>`;
+		// this.attachShadow({ mode: "open" })
+        this.innerHTML = `<p>Loading data...</p>`;
 	}
 
 	static get observedAttributes() {
@@ -21,7 +21,7 @@ class ListingItem extends HTMLElement {
     `
 
 	render() {
-		this.shadowRoot.innerHTML = `
+		this.innerHTML = `
             <style>${ListingItem.css}</style>
             
             <section>
@@ -30,6 +30,9 @@ class ListingItem extends HTMLElement {
                 <p class="type">${this.type}</p>
                 <p class="address">${this.address}</p>
                 <p class="description">${this.description}</p>
+				<button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">Reserve Table</button>
+				<button type="button" class="ReservePage btn" >View Restaurant </button>
+				
                 <hr>
             </section>
         `
