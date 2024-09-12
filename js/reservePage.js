@@ -3,8 +3,6 @@
 class ReservePage extends HTMLElement {
 	constructor() {
 		super()
-		// this.attachShadow({ mode: "open" })
-        this.innerHTML = `<p>Loading data...</p>`;
 	}
 
     // Fetch data using async/await
@@ -26,18 +24,18 @@ class ReservePage extends HTMLElement {
     // Render the component based on fetched data
     render(data) {
         const listings = data.listings
-        // this.innerHTML = `
-        // <style>${ReservePage.css}</style>
+        this.shadowRoot.innerHTML = `
+        <style>${ReservePage.css}</style>
 
-        // <section>
-        //     <h1>Reserve a table</h1>
-        //     <p>Click on a restaurant and 'reserve a table'</p>
-        //     <div id="target"></div>
-        // </section>
-        // `
+        <section>
+            <h1>Reserve a table</h1>
+            <p>Click on a restaurant and 'reserve a table'</p>
+            <div id="target"></div>
+        </section>
+        `
 
         // get the target element to append listings to
-		const listingsEl = this.shadowRoot.querySelector("#target")
+		const listingsEl = this.querySelector("#listings_div")
 
 	    // loop through the listing array provided and create
 		// a <listing-item> for each object
@@ -82,7 +80,6 @@ class ReservePage extends HTMLElement {
     //         this.renderError(error);
     //     }
 	// }
-
 
 }
 

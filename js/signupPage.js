@@ -3,19 +3,18 @@
 class SignupPage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
 	}
 
     static css = `
-        h1 { color: chartreuse; }
+        h1 { color: pink; }
     `
 
     render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
             <style>${SignupPage.css}</style>
             
             <section>
-                <h1>Login Page</h1>
+                <h1>SignUp Page</h1>
                 <p>Welcome to the Login Page!</p>
                 <button>Please login here!</button>
             </section>

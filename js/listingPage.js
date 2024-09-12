@@ -3,22 +3,28 @@
 class ListingPage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
-        this.name = 'TEST'
+    }
+
+    static get observedAttributes() {
+		return ["name", "logo", "address", "type", "description"]
+	}
+
+	attributeChangedCallback(name, _, newValue) {
+		this[name] = newValue
+		this.render()
 	}
 
     static css = `
-        h1 { color: chartreuse; }
+        h1 { color: Pink; }
     `
 
     render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
             <style>${ListingPage.css}</style>
-            
+
             <section>
-                <h1>Listing Page for ${Listing.name}</h1>
-                <p>Welcome to the Login Page!</p>
-                <button>Please login here!</button>
+                <h1>${this.name} Page</h1>
+                <p>Welcome to the ${this.name} Page!</p>
             </section>
         `
     }

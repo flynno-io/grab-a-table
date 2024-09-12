@@ -3,7 +3,6 @@
 class ConfirmationPage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
     }
 
     static css = `
@@ -11,7 +10,7 @@ class ConfirmationPage extends HTMLElement {
     `
 
     render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
             <style>${ConfirmationPage.css}</style>
 
             <section>
