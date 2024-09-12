@@ -3,8 +3,6 @@
 class ListingItem extends HTMLElement {
 	constructor() {
 		super()
-		// this.attachShadow({ mode: "open" })
-        this.innerHTML = `<p>Loading data...</p>`;
 	}
 
 	static get observedAttributes() {
@@ -32,7 +30,7 @@ class ListingItem extends HTMLElement {
                 <p class="description">${this.description}</p>
 				<button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">Reserve Table</button>
 				<button type="button" class="ReservePage btn" >View Restaurant </button>
-				
+
                 <hr>
             </section>
         `
