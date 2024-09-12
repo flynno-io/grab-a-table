@@ -1,0 +1,91 @@
+/* styles.css */
+
+:root {
+    --bs-primary: #ff5733; /* Changing primary color to a custom orange */
+    --bs-secondary: #6c757d; /* Custom secondary color */
+    --bs-success: #28a745; /* Custom success color */
+    --bs-info: #17a2b8; /* Custom info color */
+    --bs-warning: #ffc107; /* Custom warning color */
+    --bs-danger: #dc3545; /* Custom danger color */
+    --bs-light: #f8f9fa; /* Custom light color */
+    --bs-dark: #343a40; /* Custom dark color */
+  }
+
+/*///// GLOBAL STYLES /////*/
+* {
+    font-family: "Urbanist", "Monaco", sans-serif !important;
+}
+
+/*///// HEADER /////*/
+nav {
+    background-color: darkorange !important;
+}
+
+/*///// NAVBAR LOGO /////*/
+.nav-logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.2rem;
+}
+
+.nav-logo:hover,
+.nav-logo:focus,
+.nav-logo.active {
+    color: white;
+}
+
+.nav-logo:hover>img,
+.nav-logo:focus>img,
+.nav-logo.active>img {
+    content: url(../assets//icons/reserved_white.png)
+}
+
+.nav-logo>img {
+    margin-right: .75rem;
+    width: 3.5rem;
+    height: auto;
+}
+
+/*///// NAVBAR LINKS /////*/
+a.nav-link {
+    cursor: pointer;
+    margin: .5rem;
+    padding: 0 .25rem;
+}
+
+.nav-link:hover,
+a.nav-link.active {
+    color: white !important;
+    font-weight: inherit !important;
+}
+
+/*///// PAGE CONTAINER /////*/
+
+main, #page-container, .page-wrapper,
+home-page, reserve-page, listing-page, login-page, signup-page {
+    width: 100vw;
+    height: 100%;
+    display: block;
+}
+
+
+/* For devices ≥576px */
+@media (min-width: 576px) {
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* For devices ≥768px */
+@media (min-width: 768px) {
+    .custom-class {
+        background-color: lightgreen;
+    }
+}
+
+/* For devices ≥992px */
+@media (min-width: 992px) {
+    .custom-class {
+        background-color: lightcoral;
+    }
+}

@@ -3,7 +3,6 @@
 class LoginPage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
 	}
 
     static css = `
@@ -11,7 +10,7 @@ class LoginPage extends HTMLElement {
     `
 
     render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
             <style>${LoginPage.css}</style>
             
             <section>

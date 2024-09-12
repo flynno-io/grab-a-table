@@ -3,8 +3,6 @@
 class ListingItem extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
-        this.shadowRoot.innerHTML = `<p>Loading data...</p>`;
 	}
 
 	static get observedAttributes() {
@@ -21,7 +19,7 @@ class ListingItem extends HTMLElement {
     `
 
 	render() {
-		this.shadowRoot.innerHTML = `
+		this.innerHTML = `
             <style>${ListingItem.css}</style>
             
             <section>
