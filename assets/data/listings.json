@@ -2,83 +2,69 @@
 	"listings": [
 		{
 			"id": "1",
-            "name": "Burger Kingdom",
-			"type": "Fast Food",
-			"logo": "https://via.placeholder.com/150/FF0000/FFFFFF?Text=burgerkingdom",
+			"name": "Taco Guild",
+			"type": "Bars, Tacos, Mexican Restaurant",
+			"logo": "./assets/images/taco-guild-logo.jpg",
 			"address": "1010 W Main St, Unit A",
-			"description": "Delicious burgers with a variety of toppings."
+			"description": "Known for its beautiful historic church building, its innovative internationally-inspired taco offerings and list of more than 200 agave spirits, Taco Guild is known for its food quality, wide range of local and global flavors and pushing tacos to their limits."
 		},
 		{
 			"id": "2",
             "name": "Sushi Zen",
 			"type": "Japanese Restaurant",
-			"logo": "https://via.placeholder.com/150/00FF00/000000?Text=sushizen",
+			"logo": "./assets/images/harumi-sushi-logo.jpg",
 			"address": "2020 E Sushi Ln, Floor 3",
-			"description": "Fresh sushi rolls and traditional Japanese cuisine."
+			"description": "Vibrant sushi house with a casual ambiance, Both chef and creator, above all else, an artisan of living and eating well, Harumi’s dishes are comprised of a breathing expression of Japanese tradition united in modernity."
 		},
 		{
 			"id": "3",
-            "name": "Pizza Palace",
-			"type": "Pizzeria",
-			"logo": "https://via.placeholder.com/150/FFFF00/000000?Text=pizzapalace",
+			"name": "Curry Corner",
+			"type": "Indian Restaurant",
+			"logo": "./assets/images/curry-corner-logo.png",
 			"address": "3030 N Pepperoni Ave, Suite 200",
-			"description": "Hand-tossed pizzas with a variety of toppings."
+			"description": "A wide selection of curry dishes & other family recipes star at this low-key Indian restaurant."
 		},
 		{
 			"id": "4",
-            "name": "Taco Fiesta",
-			"type": "Mexican Grill",
-			"logo": "https://via.placeholder.com/150/FF5733/FFFFFF?Text=tacofiesta",
-			"address": "4040 S Salsa Rd, Unit 1B",
-			"description": "Authentic tacos with fresh ingredients and bold flavors."
+			"name": "Green Bowl",
+			"type": "Vegan, Salads",
+			"logo": "./assets/images/green-logo.jpg",
+			"address": "3030 N Pepperoni Ave, Suite 200",
+			"description": "Wholesome vegan meals with organic produce"
 		},
 		{
 			"id": "5",
-            "name": "Green Bowl",
-			"type": "Vegan Café",
-			"logo": "https://via.placeholder.com/150/008000/FFFFFF?Text=greenbowl",
-			"address": "5050 Healthy Way, Suite 5",
-			"description": "Wholesome vegan meals with organic produce."
+			"name": "North Italia",
+			"type": "Italian Restaurant",
+			"logo": "./assets/images/north-italia-logo.jpg",
+			"address": "4040 S Salsa Rd, Unit 1B",
+			"description": "Contemporary takes on Italian classics star at this warehouse-chic trattoria with a lively bar."
 		},
 		{
 			"id": "6",
+			"name": "China Chili",
+			"type": "Chinese Restaurant",
+			"logo": "./assets/images/china-chili-logo.png",
+			"address": "5050 Healthy Way, Suite 5",
+			"description": "Casual eatery serving regional Chinese dishes & Asian cocktails in a traditionally decorated space."
+		},
+		{
+			"id": "7",
             "name": "Café Amore",
 			"type": "Coffee Shop",
-			"logo": "https://via.placeholder.com/150/800000/FFFFFF?Text=cafeamore",
+			"logo": "./assets/images/cafe-logo.png",
 			"address": "6060 Latte Blvd, Unit 8",
 			"description": "Specialty coffee drinks and fresh pastries."
 		},
 		{
-			"id": "7",
-            "name": "Grill Master",
-			"type": "Barbecue Joint",
-			"logo": "https://via.placeholder.com/150/FF4500/FFFFFF?Text=grillmaster",
-			"address": "7070 BBQ Dr, Block C",
-			"description": "Smoked meats and savory barbecue sauces."
-		},
-		{
+
 			"id": "8",
-            "name": "Dragon Wok",
-			"type": "Chinese Restaurant",
-			"logo": "https://via.placeholder.com/150/FF6347/FFFFFF?Text=dragonwok",
-			"address": "8080 Szechuan St, Unit 3",
-			"description": "Traditional Chinese dishes with a modern twist."
-		},
-		{
-			"id": "9",
-            "name": "Pasta Fresca",
-			"type": "Italian Eatery",
-			"logo": "https://via.placeholder.com/150/DAA520/FFFFFF?Text=pastafresca",
-			"address": "9090 Olive Ave, Floor 2",
-			"description": "Fresh pasta made daily with authentic sauces."
-		},
-		{
-			"id": "10",
-            "name": "The Ice Cream Shack",
-			"type": "Dessert Parlor",
-			"logo": "https://via.placeholder.com/150/ADD8E6/FFFFFF?Text=icecreamshack",
-			"address": "10101 Sweet Ln, Unit 9",
-			"description": "Homemade ice cream in a variety of flavors."
+			"name": "Bobby Q's BBQ",
+			"type": "Barbecue Joint",
+			"logo": "./assets/images/bobby-q-logo.jpg",
+			"address": "7070 BBQ Dr, Block C",
+			"description": "Formerly knowna as Bobby McGee's, Bobby-Q BBQ has been serving great steaks and great barbeque since 2005. Slow cooking over Almond and Mesquite wood paired with the perfect blend of spices results in succulent hand-pulled pork, smoky sausage links, fork-ender brisket and ribs that fall right off the bone."
+
 		}
 	]
 }
