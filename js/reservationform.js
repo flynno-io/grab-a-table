@@ -9,7 +9,6 @@ const emailaddress = document.querySelector("#exampleInputEmail1");
 const selecteddatetime = document.querySelector("#result");
 const tablenumber = document.getElementById("randomNumber");
 
-// TODO: update code to meet Javascript naming conventions and remove unused code.
 
 //
 /* reservebutton.onclick = function() {
@@ -20,7 +19,7 @@ const tablenumber = document.getElementById("randomNumber");
 
 function reserveatable(event) {
     event.preventDefault();
-    if (!fname.value || !emailaddress.value || !result.value) { // FIXME: updated 'result' to correct element being selectdatatime
+    if (!fname.value || !emailaddress.value || !result.value) {
         let element = document.querySelector ('#error');
         element.innerHTML = "All fields are mandatory. Update fields and resubmit";
         element.style = "color:red";
@@ -33,11 +32,28 @@ function reserveatable(event) {
         tableNumber: Math.floor(Math.random() * 10) + 1,
     };
     localStorage.setItem("userData", JSON.stringify(userData));
-    // window.location.href = "reservationconfirmation.html";
+
+    
+
+     // Trigger the close modal button
+     triggerCloseModalButton();
+
+    /* window.location.href = "confirmationPage.html"; */
     window.location.hash = "#/confirmation"
 
-
+    
+      
 }
+
+    // Function to close the modal
+    function triggerCloseModalButton() {
+        const closeButton = document.querySelector('.modalclose');
+        if (closeButton) {
+          closeButton.click();
+        } else {
+          console.error('Close modal button not found');
+        }
+      }
 
 
 modalreservetable.addEventListener('click', reserveatable);

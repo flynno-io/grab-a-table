@@ -24,7 +24,9 @@ class HomePage extends HTMLElement {
                             <div class="carousel-caption">
                                 <h5>Reserve a table</h5>
                                 <p>Review, reserve, and relax before your next meal out.</p>
-                                <button class="btn btn-primary">Reserve</button>
+                                <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Reserve Table
+                                </button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -32,7 +34,9 @@ class HomePage extends HTMLElement {
                             <div class="carousel-caption">
                                 <h5>A table for family</h5>
                                 <p>Find restaurants that are perfect for your next family outing.</p>
-                                <button class="btn btn-primary">Reserve</button>
+                                <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Reserve Table
+                                </button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -48,7 +52,9 @@ class HomePage extends HTMLElement {
                             <div class="carousel-caption">
                                 <h5>Reserve in advance</h5>
                                 <p>Book a table up to 3 weeks in advance so you can plan ahead. </p>
-                                <button class="btn btn-primary">Reserve</button>
+                                <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Reserve Table
+                                </button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -56,7 +62,9 @@ class HomePage extends HTMLElement {
                             <div class="carousel-caption">
                                 <h5>Fancy Night out</h5>
                                 <p>Whether its fancy or family, we have table reservations for a variety of restaurants. Check it out.</p>
-                                <button class="btn btn-primary">Reserve</button>
+                                <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Reserve Table
+                                </button>
                             </div>
                         </div>
                         <div class="carousel-item">
@@ -64,7 +72,9 @@ class HomePage extends HTMLElement {
                             <div class="carousel-caption">
                                 <h5>Tables for groups</h5>
                                 <p>Find restaurants that accommodate large groups for your next friend meet up.</p>
-                                <button class="btn btn-primary">Reserve</button>
+                                <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Reserve Table
+                                </button>
                             </div>
                         </div>
                         <div class="carousel-item">

@@ -31,22 +31,22 @@ class ConfirmationPage extends HTMLElement {
     connectedCallback() {
         this.render()
         
-        //select variable to select required elements.
-        const userInfo = document.getElementById("userInfo")
-
-        //grab inputs from local storage
-        const userData = JSON.parse(localStorage.getItem("userData"))
-        if (userData) {
-            userInfo.innerHTML = `
-                <p><strong>Name:</strong> ${userData.name}</p>
-                <p><strong>Email:</strong> ${userData.email}</p>
-                <p><strong>Table ${userData.tableNumber} has been reserved for you! <strong></p>
-            `
-        } else {
-            //publish data from local storage as inner HTML
-            userInfo.innerHTML = "<p>No user data found.</p>"
+            //select variable to select required elements.
+            const userInfo = document.getElementById("userInfo")
+        
+            //grab inputs from local storage
+            const userData = JSON.parse(localStorage.getItem("userData"))
+            if (userData) {
+                userInfo.innerHTML = `
+                    <p><strong>Name:</strong> ${userData.name}</p>
+                    <p><strong>Email:</strong> ${userData.email}</p>
+                    <p><strong>Table ${userData.tableNumber} has been reserved for you! <strong></p>
+                `
+            } else {
+                //publish data from local storage as inner HTML
+                userInfo.innerHTML = "<p>No user data found.</p>"
+            }
         }
-    }
 }
 
-customElements.define("confirmation-page", ConfirmationPage)
+customElements.define("confirmation-page", ConfirmationPage);

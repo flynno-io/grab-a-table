@@ -62,120 +62,55 @@
 			<div id="page-container" class="container-fluid m-0 p-0"></div>
 
 			<!-- Reservation Modal -->
-			<div
-				class="modal fade"
-				id="reserveModal"
-				tabindex="-1"
-				aria-labelledby="reserveModalLabel"
-				aria-hidden="true"
-			>
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h1 class="modal-title fs-5" id="reserveModalLabel">
-								Table Reservation Form
-							</h1>
-							<button
-								type="button"
-								class="btn-close"
-								data-bs-dismiss="modal"
-								aria-label="Close"
-							></button>
-						</div>
-						<div class="modal-body">
-							<form class="userForm">
-								<div class="mb-3">
-									<p id="error"></p>
-									<label for="name" class="form-label">Full Name</label>
-									<input type="text" class="form-control" id="name" />
-								</div>
-								<div class="mb-3">
-									<label for="exampleInputEmail1" class="form-label"
-										>Email address</label
-									>
-									<input
-										type="email"
-										class="form-control"
-										id="exampleInputEmail1"
-										aria-describedby="emailHelp"
-									/>
-									<input
-										type="checkbox"
-										name="subscribe"
-										id="subscribe"
-										checked
-									/>
-									<label for="subscribe" id="emailHelp" class="form-text"
-										>Reservation confirmation will be sent by email</label
-									>
-								</div>
-								<div class="row g-3">
-									<div class="col-md-4">
-										<label for="dateInput" class="form-label">Date:</label>
-										<div class="input-group">
-											<input
-												type="text"
-												class="form-control datepicker"
-												id="dateInput"
-												required
-											/>
-											<span class="input-group-text"
-												><i class="bi bi-calendar"></i
-											></span>
-										</div>
-									</div>
-									<div class="col-md-4">
-										<label for="timeInput" class="form-label">Time:</label>
-										<input
-											type="time"
-											class="form-control"
-											id="timeInput"
-											required
-										/>
-									</div>
-									<div class="col-md-4 d-flex align-items-end">
-										<button
-											type="button"
-											class="btn btn-primary"
-											onclick="updateDateTime()"
-										>
-											Set Date and Time
-										</button>
-									</div>
-								</div>
-								<div class="mt-4">
-									<label for="result" class="form-label"
-										>Selected Date and Time:</label
-									>
-									<input
-										type="text"
-										class="form-control"
-										id="result"
-										required
-										readonly
-									/>
-								</div>
-							</form>
-						</div>
-						<div class="modal-footer">
-							<button
-								type="button"
-								class="btn btn-secondary modalclose"
-								data-bs-dismiss="modal"
-							>
-								Close
-							</button>
-							<button
-								class="btn btn-primary modalreservetable"
-								type="submit"
-								value="Submit"
-							>
-								Reserve
-							</button>
-						</div>
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <h1 class="modal-title fs-5" id="exampleModalLabel">Table Reservation Form</h1>
+					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
+					<div class="modal-body">
+					  <form class="userForm">
+						<div class="mb-3">
+						  <p id="error"></p>
+						  <label for="name" class="form-label">Full Name</label>
+						  <input type="text" class="form-control" id="name">
+						</div>
+						<div class="mb-3">
+						  <label for="exampleInputEmail1" class="form-label">Email address</label>
+						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+						</div>
+						<div class="row g-3">
+						  <div class="col-md-4">
+							  <label for="dateInput" class="form-label">Date:</label>
+							  <div class="input-group">
+								  <input type="text" class="form-control datepicker" id="dateInput" required>
+								  <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+							  </div>
+						  </div>
+						  <div class="col-md-4">
+							  <label for="timeInput" class="form-label">Time:</label>
+							  <input type="time" class="form-control" id="timeInput" required>
+						  </div>
+						  <div class="col-md-4 d-flex align-items-end">
+							  <button type="button" class="btn btn-primary" onclick="updateDateTime()">Set Date and Time</button>
+						  </div>
+						</div>
+						<div class="mt-4">
+						  <label for="result" class="form-label">Selected Date and Time:</label>
+						  <input type="text" class="form-control" id="result" required readonly>
+						</div>
+					  </form>
+					</div>
+					<div class="modal-footer">
+					  <button type="button" class="btn btn-secondary modalclose" data-bs-dismiss="modal">Close</button>
+					  <button class="btn btn-primary modalreservetable" type="submit" value="Submit">Reserve</button>
+					</div>
+				  </div>
 				</div>
-			</div>
+			  </div>
+			  
 		</main>
 
 		<footer class="container-fluid m-0 p-0">
@@ -214,8 +149,12 @@
 		<script defer src="js/confirmationPage.js"></script>
 		<script defer src="js/notFoundPage.js"></script>
 
-		<!-- Javascript for Reservation Modal -->
-		<script defer src="js\reservationform.js"></script>
+		
+		<!-- Bootstrap JS Bundle with Popper -->
+		<script 
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
+		></script>
 
 		<!-- jQuery (required for Bootstrap Datepicker) -->
 		<script
@@ -227,6 +166,17 @@
 		<script
 			defer
 			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"
+		></script>
+
+		<!-- Bootstrap Datepicker JS -->
+		<script 
+			defer
+			src="js\reservationform.js"
+		></script>
+		
+		<script 
+			defer
+			src="js\confirmationPage.js"
 		></script>
 	</body>
 </html>
