@@ -26,8 +26,8 @@ class ListingCard extends HTMLElement {
                     <p class="card-text">${this.description}</p>
                     <div class="btn-wrapper">
                         <a href="#/reserve/listing/${this.id}" class="btn btn-primary">View restaurant</a>
-                        <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#reserveModal">
-                            Reserve Table
+                        <button type="button" class="btn btn-primary reservetable" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Reserve Table
                         </button>
                     </div>
                 </div>
