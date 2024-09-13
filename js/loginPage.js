@@ -3,7 +3,6 @@
 class LoginPage extends HTMLElement {
 	constructor() {
 		super()
-		this.attachShadow({ mode: "open" })
 	}
 
     static css = `
@@ -73,7 +72,7 @@ class LoginPage extends HTMLElement {
     border-radius: 40px;
     box-shadow: 0 0 10px black;
     cursor: pointer;
-    font-size: 10px;
+    font-size: 15px;
     color: black;
     font-weight: 600;
     }
@@ -81,7 +80,7 @@ class LoginPage extends HTMLElement {
     `
 
     render() {
-        this.shadowRoot.innerHTML = `
+        this.innerHTML = `
             <style>${LoginPage.css}</style>
             
             <section>
@@ -92,6 +91,9 @@ class LoginPage extends HTMLElement {
             <div class="input-box">
             <input type="text" placeholder="Username" >
             </div>
+            <div class="input-box">
+            <input type="email" placeholder="Email">
+            </div>
            <div class="input-box">
             <input type="Password" placeholder="Password" >
             </div>
@@ -100,23 +102,7 @@ class LoginPage extends HTMLElement {
             </form>
 
             </body>
-           <body>
-            <form action="">
-            <h1> Signup </h1>
-            <div class="input-box">
-            <input type="text" placeholder="Username" >
-            </div>
-           <div class="input-box">
-            <input type="Password" placeholder="Password" >
-            </div>
-             <div class="input-box">
-            <input type="Repeat Password" placeholder="Repeat Password" >
-            </div>
-            <button type="submit" class="btn">Signup</button>
-            </form>
-            </div>
-            </body>
-
+          
 
    
             </section>

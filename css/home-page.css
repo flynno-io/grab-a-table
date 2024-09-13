@@ -1,0 +1,23 @@
+
+.carousel, .carousel-inner {
+    height: 100%;
+    width: 100%;
+}
+
+.carousel-item>img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    text-align: left;
+    padding: 10px 20px;
+    background-color: rgb(24, 28, 20, 0.6);
+    border-radius: 5px;
+    margin-bottom: 1rem
+}
+
+.carousel-indicators {
+    bottom: 0;
+}

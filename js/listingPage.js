@@ -1,20 +1,33 @@
 // js/listingPage.js
 
 class ListingPage extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.innerHTML = `
-      <style>
-        h1 { color: purple; }
-      </style>
-      <div>
-        <h1>Listing Page</h1>
-        <p>Welcome to the Listing Page!</p>
-        <article>Your listing info is here.</article>
-      </div>
-    `;
-  }
+	constructor() {
+		super()
+    }
+
+	static get observedAttributes() {
+		return ["id", "name", "logo", "altText", "address", "type", "description"]
+	}
+
+	attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this[name] = newValue;
+        }
+		this.render()
+	}
+
+    render() {
+        this.innerHTML = `
+            <section>
+                <h1>${this.name} Page</h1>
+                <p>Welcome to the ${this.name} Page!</p>
+            </section>
+        `
+    }
+
+    connectedCallback() {
+        this.render()
+    }
 }
 
-customElements.define('listing-page', ListingPage);
+customElements.define("listing-page", ListingPage)
