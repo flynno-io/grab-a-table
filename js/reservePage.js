@@ -24,14 +24,14 @@ class ReservePage extends HTMLElement {
     // Render the component based on fetched data
     render(data) {
         const listings = data.listings
-        this.shadowRoot.innerHTML = `
-        <style>${ReservePage.css}</style>
+        this.innerHTML = `
+            <style>${ReservePage.css}</style>
 
-        <section>
-            <h1>Reserve a table</h1>
-            <p>Click on a restaurant and 'reserve a table'</p>
-            <div id="target"></div>
-        </section>
+            <section>
+                <h1>Reserve a table</h1>
+                <p>Click on a restaurant and 'reserve a table'</p>
+                <div id="listings_div"></div>
+            </section>
         `
 
         // get the target element to append listings to
@@ -64,22 +64,13 @@ class ReservePage extends HTMLElement {
 
 	async connectedCallback() {
         // get listings from 'listings.json' file
-        this.innerHTML = `
-        <style>${ReservePage.css}</style>
-
-        <section>
-            <h1>Reserve a table</h1>
-            <p>Click on a restaurant and 'reserve a table'</p>
-            <div id="target"></div>
-        </section>
-        `
-    //     try {
-    //         const data = await this.fetchData();
-    //         this.render(data);
-    //     } catch (error) {
-    //         this.renderError(error);
-    //     }
-	// }
+        try {
+            const data = await this.fetchData();
+            this.render(data);
+        } catch (error) {
+            this.renderError(error);
+        }
+	}
 
 }
 
