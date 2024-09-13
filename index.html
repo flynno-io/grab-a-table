@@ -28,7 +28,8 @@
 		<link rel="stylesheet" href="./css/login-page.css" />
 		<link rel="stylesheet" href="./css/signup-page.css" />
 		<link rel="stylesheet" href="./css/confirmation-page.css" />
-        
+		<link rel="stylesheet" href="./css/notFound-page.css" />
+
 		<title>Grab a Table</title>
 	</head>
 
@@ -47,7 +48,9 @@
 					</a>
 					<div class="nav-underline flex-xs-row m-0 p-0" id="navbarNav">
 						<div class="navbar-nav m-2">
-							<a class="nav-link active" id="nav-home" aria-current="page">Home</a>
+							<a class="nav-link active" id="nav-home" aria-current="page"
+								>Home</a
+							>
 							<a class="nav-link" id="nav-reserve">Reserve</a>
 							<a class="nav-link" id="nav-login">Login</a>
 							<a class="nav-link" id="nav-signup">Sign Up</a>
@@ -62,61 +65,131 @@
 			<div id="page-container" class="container-fluid m-0 p-0"></div>
 
 			<!-- Reservation Modal -->
-			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div
+				class="modal fade"
+				id="exampleModal"
+				tabindex="-1"
+				aria-labelledby="exampleModalLabel"
+				aria-hidden="true"
+			>
 				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h1 class="modal-title fs-5" id="exampleModalLabel">Table Reservation Form</h1>
-					  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<div class="modal-content">
+						<div class="modal-header">
+							<h1 class="modal-title fs-5" id="exampleModalLabel">
+								Table Reservation Form
+							</h1>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<form class="userForm">
+								<div class="mb-3">
+									<p id="error"></p>
+									<label for="name" class="form-label">Full Name</label>
+									<input type="text" class="form-control" id="name" />
+								</div>
+								<div class="mb-3">
+									<label for="exampleInputEmail1" class="form-label"
+										>Email address</label
+									>
+									<input
+										type="email"
+										class="form-control"
+										id="exampleInputEmail1"
+										aria-describedby="emailHelp"
+									/>
+									<div id="emailHelp" class="form-text">
+										We'll never share your email with anyone else.
+									</div>
+								</div>
+								<div class="row g-3">
+									<div class="col-md-4">
+										<label for="dateInput" class="form-label">Date:</label>
+										<div class="input-group">
+											<input
+												type="text"
+												class="form-control datepicker"
+												id="dateInput"
+												required
+											/>
+											<span class="input-group-text"
+												><i class="bi bi-calendar"></i
+											></span>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<label for="timeInput" class="form-label">Time:</label>
+										<input
+											type="time"
+											class="form-control"
+											id="timeInput"
+											required
+										/>
+									</div>
+									<div class="col-md-4 d-flex align-items-end">
+										<button
+											type="button"
+											class="btn btn-primary"
+											onclick="updateDateTime()"
+										>
+											Set Date and Time
+										</button>
+									</div>
+								</div>
+								<div class="mt-4">
+									<label for="result" class="form-label"
+										>Selected Date and Time:</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="result"
+										required
+										readonly
+									/>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-secondary modalclose"
+								data-bs-dismiss="modal"
+							>
+								Close
+							</button>
+							<button
+								class="btn btn-primary modalreservetable"
+								type="submit"
+								value="Submit"
+							>
+								Reserve
+							</button>
+						</div>
 					</div>
-					<div class="modal-body">
-					  <form class="userForm">
-						<div class="mb-3">
-						  <p id="error"></p>
-						  <label for="name" class="form-label">Full Name</label>
-						  <input type="text" class="form-control" id="name">
-						</div>
-						<div class="mb-3">
-						  <label for="exampleInputEmail1" class="form-label">Email address</label>
-						  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-						  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-						</div>
-						<div class="row g-3">
-						  <div class="col-md-4">
-							  <label for="dateInput" class="form-label">Date:</label>
-							  <div class="input-group">
-								  <input type="text" class="form-control datepicker" id="dateInput" required>
-								  <span class="input-group-text"><i class="bi bi-calendar"></i></span>
-							  </div>
-						  </div>
-						  <div class="col-md-4">
-							  <label for="timeInput" class="form-label">Time:</label>
-							  <input type="time" class="form-control" id="timeInput" required>
-						  </div>
-						  <div class="col-md-4 d-flex align-items-end">
-							  <button type="button" class="btn btn-primary" onclick="updateDateTime()">Set Date and Time</button>
-						  </div>
-						</div>
-						<div class="mt-4">
-						  <label for="result" class="form-label">Selected Date and Time:</label>
-						  <input type="text" class="form-control" id="result" required readonly>
-						</div>
-					  </form>
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-secondary modalclose" data-bs-dismiss="modal">Close</button>
-					  <button class="btn btn-primary modalreservetable" type="submit" value="Submit">Reserve</button>
-					</div>
-				  </div>
 				</div>
-			  </div>
-			  
+			</div>
 		</main>
 
 		<footer class="container-fluid m-0 p-0">
 			Footer
 			<!-- <a href="https://www.flaticon.com/free-icons/reservation" title="reservation icons">Reservation icons created by RIkas Dzihab - Flaticon</a> -->
 		</footer>
+
+		<!-- Include JavaScript for Web Components -->
+		<script src="js/app.js"></script>
+		<script defer src="js/homePage.js"></script>
+		<script defer src="js/loginPage.js"></script>
+		<script defer src="js/signupPage.js"></script>
+		<script defer src="js/reservePage.js"></script>
+		<script defer src="js/listingCard.js"></script>
+		<script defer src="js/listingPage.js"></script>
+		<script defer src="js/confirmationPage.js"></script>
+		<script defer src="js/notFoundPage.js"></script>
 
 		<!-- Bootstrap JS for dropdowns, popovers, and/or tooltips -->
 		<script
@@ -138,20 +211,8 @@
 			crossorigin="anonymous"
 		></script>
 
-		<!-- Include JavaScript for Web Components -->
-		<script src="js/app.js"></script>
-		<script defer src="js/homePage.js"></script>
-		<script defer src="js/loginPage.js"></script>
-		<script defer src="js/signupPage.js"></script>
-		<script defer src="js/reservePage.js"></script>
-		<script defer src="js/listingCard.js"></script>
-		<script defer src="js/listingPage.js"></script>
-		<script defer src="js/confirmationPage.js"></script>
-		<script defer src="js/notFoundPage.js"></script>
-
-		
 		<!-- Bootstrap JS Bundle with Popper -->
-		<script 
+		<script
 			defer
 			src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"
 		></script>
@@ -169,14 +230,8 @@
 		></script>
 
 		<!-- Bootstrap Datepicker JS -->
-		<script 
-			defer
-			src="js\reservationform.js"
-		></script>
-		
-		<script 
-			defer
-			src="js\confirmationPage.js"
-		></script>
+		<script defer src="js\reservationform.js"></script>
+
+		<script defer src="js\confirmationPage.js"></script>
 	</body>
 </html>
