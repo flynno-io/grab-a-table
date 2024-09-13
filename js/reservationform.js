@@ -9,6 +9,7 @@ const emailaddress = document.querySelector("#exampleInputEmail1");
 const selecteddatetime = document.querySelector("#result");
 const tablenumber = document.getElementById("randomNumber");
 
+// TODO: update code to meet Javascript naming conventions and remove unused code.
 
 //
 /* reservebutton.onclick = function() {
@@ -19,7 +20,7 @@ const tablenumber = document.getElementById("randomNumber");
 
 function reserveatable(event) {
     event.preventDefault();
-    if (!fname.value || !emailaddress.value || !result.value) {
+    if (!fname.value || !emailaddress.value || !result.value) { // FIXME: updated 'result' to correct element being selectdatatime
         let element = document.querySelector ('#error');
         element.innerHTML = "All fields are mandatory. Update fields and resubmit";
         element.style = "color:red";
@@ -32,7 +33,8 @@ function reserveatable(event) {
         tableNumber: Math.floor(Math.random() * 10) + 1,
     };
     localStorage.setItem("userData", JSON.stringify(userData));
-    window.location.href = "reservationconfirmation.html";
+    // window.location.href = "reservationconfirmation.html";
+    window.location.hash = "#/confirmation"
 
 
 }

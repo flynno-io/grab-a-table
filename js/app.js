@@ -13,20 +13,30 @@ const signupTab = document.getElementById("nav-signup")
 let currentActiveTab = document.querySelector(".active")
 
 function navigateToHash(hash) {
-	switch (hash) {
-        case "#/login":
+    const loginPattern = /^#\/login$/;
+    const signupPattern = /^#\/signup$/;
+    const reservePattern = /^#\/reserve$/;
+    const reserveListingPattern = /^#\/reserve\/listing\/([1-9][0-9]{0,2}|1000)$/; // Matches numbers 1 to 1000
+    const confirmationPattern = /^#\/confirmation$/;
+    const homePattern = /^#\/home$/;
+
+	switch (true) {
+        case loginPattern.test(hash):
 			loadPage('login')
 			break
-        case "#/signup":
+        case signupPattern.test(hash):
 			loadPage('signup')
 			break
-		case "#/reserve":
+        case reserveListingPattern.test(hash):
+            loadPage('listing', hash.split('/')[2])
+            break
+		case reservePattern.test(hash):
 			loadPage('reserve')
 			break
-        case "#/confirmation":
+        case confirmationPattern.test(hash):
             loadPage('confirmation')
             break
-		case "#/home":
+		case homePattern.test(hash):
 			loadPage('home')
 			break
 		// Add other routes here
@@ -44,6 +54,12 @@ function loadPage(page, id=null) {
             updateURL("reserve")
             updateBrowserHistory("reserve")
             break
+        case 'listing':
+            addActiveClass(reserveTab)
+            appendPageToContainer("listing-page")
+            updateURL(`#/reserve/listing/${id}`)
+            updateBrowserHistory(`listing/${id}`)
+            break
         case 'login':
             addActiveClass(loginTab)
             appendPageToContainer("login-page")
@@ -57,7 +73,7 @@ function loadPage(page, id=null) {
             updateBrowserHistory("signup")
             break
         case 'confirmation':
-            addActiveClass("reserve")
+            addActiveClass(reserveTab)
             appendPageToContainer("confirmation-page")
             updateURL("confirmation")
             updateBrowserHistory("confirmation")
@@ -77,9 +93,12 @@ function loadPage(page, id=null) {
 }
 
 // Add the page to the DOM (index.html)
-function appendPageToContainer(page) {
+function appendPageToContainer(page, id=null) {
     pageContainer.innerHTML = "" // Clear the current page
 	const pageElement = document.createElement(page) // Create the new page element
+    if (page === 'listing-page') {
+        pageElement.setAttribute('data-id', id)
+    }
 	pageContainer.appendChild(pageElement) // Append the new page to the container
 }
 
@@ -87,6 +106,8 @@ function appendPageToContainer(page) {
 function addActiveClass(target=null) {
     // Do nothing when the active tab is selected
     if (currentActiveTab === target) { return }
+
+    // FIXME: fix case when navigating back from 404 page to last active page (e.g., reserve > view restaurant > 404 then go back to reserve)
 
     // Removes the active tab when a page is not found (404)
     if (!target) { 
@@ -98,6 +119,7 @@ function addActiveClass(target=null) {
     currentActiveTab = target
 }
 
+// Update the URL to reflect the selected page TODO: update to work with #/listing/{id}
 function updateURL(path, id = null) {
 	const getBaseURL = () => {
 		const protocol = window.location.protocol
@@ -106,7 +128,7 @@ function updateURL(path, id = null) {
 		return `${protocol}//${hostname}${port}`
 	}
 	const baseURL = getBaseURL()
-	window.history.pushState({}, "", `${baseURL}/#/${path}`)
+	window.history.pushState({}, "", `${baseURL}/#/${path}`) // Update code to work with #/listing/{id}
 }
 
 function capitalize(word) {

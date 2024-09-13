@@ -38,10 +38,11 @@ class ReservePage extends HTMLElement {
 		const listingsEl = this.querySelector("#listings_div")
 
 	    // loop through the listing array provided and create
-		// a <listing-item> for each object
+		// a <listing-card> for each object
         listings.forEach((listingObj, index) => {
             // console.log(listing, index)
-			const listing = document.createElement("listing-item")
+			const listing = document.createElement("listing-card")
+            listing.setAttribute("id", listingObj.id)
 			listing.setAttribute("name", listingObj.name)
 			listing.setAttribute("logo", listingObj.logo)
 			listing.setAttribute("address", listingObj.address)
