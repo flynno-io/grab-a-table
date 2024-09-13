@@ -57,7 +57,7 @@ function loadPage(page, id=null) {
         case 'listing':
             addActiveClass(reserveTab)
             appendPageToContainer("listing-page")
-            updateURL(`listing/${id}`)
+            updateURL(`#/reserve/listing/${id}`)
             updateBrowserHistory(`listing/${id}`)
             break
         case 'login':
@@ -119,6 +119,7 @@ function addActiveClass(target=null) {
     currentActiveTab = target
 }
 
+// Update the URL to reflect the selected page TODO: update to work with #/listing/{id}
 function updateURL(path, id = null) {
 	const getBaseURL = () => {
 		const protocol = window.location.protocol
@@ -127,7 +128,7 @@ function updateURL(path, id = null) {
 		return `${protocol}//${hostname}${port}`
 	}
 	const baseURL = getBaseURL()
-	window.history.pushState({}, "", `${baseURL}/#/${path}`)
+	window.history.pushState({}, "", `${baseURL}/#/${path}`) // Update code to work with #/listing/{id}
 }
 
 function capitalize(word) {
