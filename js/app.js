@@ -20,7 +20,7 @@ function navigateToHash(hash) {
     const loginPattern = /^#\/login$/;
     const signupPattern = /^#\/signup$/;
     const reservePattern = /^#\/reserve$/;
-    const reserveListingPattern = /^#\/reserve\/listing\/([1-9][0-9]{0,2}|1000)$/; // Matches numbers 1 to 1000
+    const reserveListingPattern = /^#\/reserve\/listing\/[1-8]$/; // TODO: find a solution to dynamically increase the regex id check as listings increase or show an error messages
     const confirmationPattern = /^#\/confirmation$/;
     const homePattern = /^#\/home$/;
 

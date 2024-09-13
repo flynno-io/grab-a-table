@@ -1,0 +1,33 @@
+/* css/notFound-page.css */
+
+.pnf-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    object-fit: contain;
+    background-image: url(../assets/images/empty_restaurant.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.page-not-found {
+    height: 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.warning-icon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.page-not-found>h1 {
+    font-size: 3rem;
+}
+
+.page-not-found>p {
+    font-size: 1.5rem;
+}
