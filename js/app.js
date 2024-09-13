@@ -101,7 +101,7 @@ function appendPageToContainer(page, id=null) {
     pageContainer.innerHTML = "" // Clear the current page
 	const pageElement = document.createElement(page) // Create the new page element
     if (page === 'listing-page') {
-        pageElement.setAttribute('data-id', id)
+        pageElement.setAttribute('id', id)
     }
 	pageContainer.appendChild(pageElement) // Append the new page to the container
 }
