@@ -12,6 +12,10 @@ const signupTab = document.getElementById("nav-signup")
 // Keep track of the tab with the 'active' class for updating the UI on click
 let currentActiveTab = document.querySelector(".active")
 
+// ***
+// NAVIGATION, LOADING, & HELPER FUNCTIONS //
+// ***
+
 function navigateToHash(hash) {
     const loginPattern = /^#\/login$/;
     const signupPattern = /^#\/signup$/;
@@ -28,7 +32,7 @@ function navigateToHash(hash) {
 			loadPage('signup')
 			break
         case reserveListingPattern.test(hash):
-            loadPage('listing', hash.split('/')[2])
+            loadPage('listing', hash.split('/')[3])
             break
 		case reservePattern.test(hash):
 			loadPage('reserve')
@@ -56,9 +60,9 @@ function loadPage(page, id=null) {
             break
         case 'listing':
             addActiveClass(reserveTab)
-            appendPageToContainer("listing-page")
-            updateURL(`#/reserve/listing/${id}`)
-            updateBrowserHistory(`listing/${id}`)
+            appendPageToContainer("listing-page", id)
+            updateURL(`reserve/listing/${id}`)
+            // updateBrowserHistory(`reserve/listing/${id}`)
             break
         case 'login':
             addActiveClass(loginTab)
@@ -120,7 +124,7 @@ function addActiveClass(target=null) {
 }
 
 // Update the URL to reflect the selected page TODO: update to work with #/listing/{id}
-function updateURL(path, id = null) {
+function updateURL(path) {
 	const getBaseURL = () => {
 		const protocol = window.location.protocol
 		const hostname = window.location.hostname
@@ -137,8 +141,12 @@ function capitalize(word) {
 
 // Enables the normal 'back' button functionality
 function updateBrowserHistory(page) {
-    window.history.pushState({page: page}, capitalize(page), `#/${page}`);
+    window.history.pushState({page: page}, capitalize(page), `#/${page}`); // TODO: read up more on the history -> pushState method.
 }
+
+// ***
+// WINDOW & DOCUMENT EVENT LISTENERS //
+// ***
 
 window.addEventListener("load", () => {
 	const hash = window.location.hash // Get the current URL hash
@@ -154,7 +162,6 @@ window.addEventListener("load", () => {
 
 window.addEventListener("hashchange", () => {
 	const hash = window.location.hash // Get the current URL hash
-    console.log(hash)
 	if (hash) {
 		// Process the hash (e.g., navigate to the correct path)
 		navigateToHash(hash)

@@ -5,23 +5,19 @@ class ListingPage extends HTMLElement {
 		super()
     }
 
-    static get observedAttributes() {
-		return ["name", "logo", "address", "type", "description"]
+	static get observedAttributes() {
+		return ["id", "name", "logo", "altText", "address", "type", "description"]
 	}
 
-	attributeChangedCallback(name, _, newValue) {
-		this[name] = newValue
+	attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this[name] = newValue;
+        }
 		this.render()
 	}
 
-    static css = `
-        h1 { color: Pink; }
-    `
-
     render() {
         this.innerHTML = `
-            <style>${ListingPage.css}</style>
-
             <section>
                 <h1>${this.name} Page</h1>
                 <p>Welcome to the ${this.name} Page!</p>
