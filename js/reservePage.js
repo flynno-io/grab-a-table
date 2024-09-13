@@ -75,14 +75,3 @@ class ReservePage extends HTMLElement {
 }
 
 customElements.define("reserve-page", ReservePage)
-
-// const listing = `<listing-card
-// id="${listingObj.id}"
-// name="${listingObj.name}"
-// logo="${listingObj.logo}"
-// address="${listingObj.address}"
-// type="${listingObj.type}"
-// description="${listingObj.description}"
-// id="${listingObj.id}"
-// id="${listingObj.id}"
-// ></listing-card>`
