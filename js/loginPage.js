@@ -1,13 +1,12 @@
 // js/loginPage.js
 
 class LoginPage extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.innerHTML = `
-      <style>
-       
+	constructor() {
+		super()
+		this.attachShadow({ mode: "open" })
+	}
 
+    static css = `
  * {
     margin: 0;
     padding: 0;
@@ -121,9 +120,12 @@ class LoginPage extends HTMLElement {
 
    
             </section>
-        
-    `
-  }
+        `
+    }
+
+    connectedCallback() {
+        this.render()
+    }
 }
 
-customElements.define('login-page', LoginPage);
+customElements.define("login-page", LoginPage)
