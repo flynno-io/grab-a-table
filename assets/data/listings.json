@@ -44,7 +44,7 @@
 			"name": "Curry Corner",
 			"type": "Indian Restaurant",
 			"logo": "./assets/images/curry-corner-logo.png",
-			"address": "3030 N Pepperoni Ave, Suite 200",
+			"address": "3030 N Pakora Ave, Suite 200",
 			"cost": "$ ($15-$25)",
 			"description": "A wide selection of curry dishes & other family recipes star at this low-key Indian restaurant.",
 			"carousel1": "./assets/images/indian.jpg",
@@ -63,7 +63,7 @@
 			"name": "Green Bowl",
 			"type": "Vegan, Salads, Veggie Wraps",
 			"logo": "./assets/images/green-logo.jpg",
-			"address": "3030 N Health Ave, Suite 200",
+			"address": "3030 N Healthy Ave, Suite 200",
 			"cost": "$ ($5-$15)",
 			"description": "Wholesome vegan meals with organic produce",
 			"carousel1": "./assets/images/green.jpg",
@@ -90,18 +90,18 @@
 			"carousel3": "./assets/images/italian-3.jpg",
 			"carousel4": "./assets/images/italian-4.jpg",
 			"carousel5": "./assets/images/italian-5.jpg",
-			"caption": "",
-			"caption2": "",
-			"caption3": "",
-			"caption4": "",
-			"caption5": ""
+			"caption": "Rich, hearty bolognese pasta full of rustic flavors",
+			"caption2": "Tender meatballs in vibrant tomato sauce served atop creamy velvety polenta",
+			"caption3": "Delicate beef carpaccio topped with pecorino stagionato, toasted pine nuts, salsa verde and arugula",
+			"caption4": "Buttery al dente pasta tossed with fresh clams, garlic, white wine and a hint of chili",
+			"caption5": "Variety of bruschetta board options"
 		},
 		{
 			"id": "6",
 			"name": "China Chili",
 			"type": "Chinese Restaurant",
 			"logo": "./assets/images/china-chili-logo.png",
-			"address": "5050 Healthy Way, Suite 5",
+			"address": "5050 Dragon Way, Suite 5",
 			"cost": "$ ($15-$25)",
 			"description": "Casual eatery serving regional Chinese dishes & Asian cocktails in a traditionally decorated space.",
 			"carousel1": "./assets/images/chinese.jpg",
@@ -109,11 +109,11 @@
 			"carousel3": "./assets/images/chinese-3.jpg",
 			"carousel4": "./assets/images/chinese-4.jpg",
 			"carousel5": "./assets/images/chinese-5.jpg",
-			"caption": "",
-			"caption2": "",
-			"caption3": "",
-			"caption4": "",
-			"caption5": ""
+			"caption": "Savory stir-fried noodles and perfectly seasoned fried rice",
+			"caption2": "House-made soup dumplings filled with warm, flavorful broth",
+			"caption3": "Succulent, sweet and smoky char siu pork marinated and roasted for that signature caramelized glaze",
+			"caption4": "Peking duck that is golden and crispy on the outside, juicy and flavorful on the inside",
+			"caption5": "Dim sum happy hour serves up small bites with big flavors"
 		},
 		{
 			"id": "7",
@@ -122,17 +122,17 @@
 			"logo": "./assets/images/cafe-logo.png",
 			"address": "6060 Latte Blvd, Unit 8",
 			"cost": "$ ($15-$25)",
-			"description": "Specialty coffee drinks and fresh pastries.",
+			"description": "Specialty coffee drinks, sparkling refreshers and fresh pastries.",
 			"carousel1": "./assets/images/cafe.jpg",
 			"carousel2": "./assets/images/cafe-2.jpg",
 			"carousel3": "./assets/images/cafe-3.jpg",
 			"carousel4": "./assets/images/cafe-4.jpg",
 			"carousel5": "./assets/images/cafe-5.jpg",
-			"caption": "",
-			"caption2": "",
-			"caption3": "",
-			"caption4": "",
-			"caption5": ""
+			"caption": "Smooth, creamy espresso topped with perfectly steamed milk, creating a rich and velvety latte",
+			"caption2": "The orange blossom special combines bright citris with warm spice, white chocolate and espresso",
+			"caption3": "Delightful freshly baked pastries from buttery almond croissants to flaky danishes and more",
+			"caption4": "Large selection of refreshing non-caffeinated drinks with fruit, floral and herbal infusions",
+			"caption5": "Breakfast and brunch provides an array of open-face panini options"
 		},
 		{
 
@@ -148,11 +148,11 @@
 			"carousel3": "./assets/images/bbq-3.jpg",
 			"carousel4": "./assets/images/bbq-4.jpg",
 			"carousel5": "./assets/images/bbq-5.jpg",
-			"caption": "",
-			"caption2": "",
-			"caption3": "",
-			"caption4": "",
-			"caption5": ""
+			"caption": "Fall-off-the-bone ribbs slathered in a smoky, tangy barbeque sauce, grilled to perfection",
+			"caption2": "Slow-cooked, tender pulled pork on a toasted bun topped with signature house barbeque sauce",
+			"caption3": "Tender, caramelized smoked rib tips served with signature barbeque sauce",
+			"caption4": "Q-Rolls stuffed with savory smoke beef brisket, barbeque sauce and chipotle ranch on the side",
+			"caption5": "Free mini donuts are the perfect sweet to end your meal"
 
 		}
 	]
