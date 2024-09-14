@@ -9,13 +9,12 @@ class ListingCard extends HTMLElement {
 		return ["id", "name", "logo", "altText", "address", "type", "description"]
 	}
 
-	attributeChangedCallback(name, _, newValue) {
-		this[name] = newValue
+	attributeChangedCallback(name, oldValue, newValue) {
+        if (oldValue !== newValue) {
+            this[name] = newValue;
+        }
 		this.render()
 	}
-
-    // FIXME: fix the console error "Uncaught RangeError: Maximum call stack size exceeded. > listingCard.js:13"
-    // the element is being called too many times.
 
 	render() {
 		this.innerHTML = `
@@ -41,7 +40,6 @@ class ListingCard extends HTMLElement {
 
 	connectedCallback() {
 		this.render()
-        console.log(this.id)
 	}
 }
 

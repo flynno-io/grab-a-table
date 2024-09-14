@@ -48,7 +48,6 @@ class ReservePage extends HTMLElement {
 			listing.setAttribute("address", listingObj.address)
 			listing.setAttribute("type", listingObj.type)
 			listing.setAttribute("description", listingObj.description)
-			listing.setAttribute("menu", listingObj.menu)
             listingsEl.appendChild(listing)
 		})
     }

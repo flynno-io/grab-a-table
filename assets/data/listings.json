@@ -3,17 +3,21 @@
 		{
 			"id": "1",
 			"name": "Taco Guild",
-			"type": "Bars, Tacos, Mexican Restaurant",
+			"type": "Crafted cocktails, local draft beers, authentic and contemporary Mexican dishes",
 			"logo": "./assets/images/taco-guild-logo.jpg",
+			"carousel": "",
 			"address": "1010 W Main St, Unit A",
+			"cost": "$$ ($20-$30)",
 			"description": "Known for its beautiful historic church building, its innovative internationally-inspired taco offerings and list of more than 200 agave spirits, Taco Guild is known for its food quality, wide range of local and global flavors and pushing tacos to their limits."
 		},
 		{
 			"id": "2",
-            "name": "Sushi Zen",
+            "name": "Harumi Sushi",
 			"type": "Japanese Restaurant",
 			"logo": "./assets/images/harumi-sushi-logo.jpg",
+			"carousel": "",
 			"address": "2020 E Sushi Ln, Floor 3",
+			"cost": "$$ ($30-40)",
 			"description": "Vibrant sushi house with a casual ambiance, Both chef and creator, above all else, an artisan of living and eating well, Harumi’s dishes are comprised of a breathing expression of Japanese tradition united in modernity."
 		},
 		{
@@ -22,6 +26,7 @@
 			"type": "Indian Restaurant",
 			"logo": "./assets/images/curry-corner-logo.png",
 			"address": "3030 N Pepperoni Ave, Suite 200",
+			"cost": "$ ($15-$25)",
 			"description": "A wide selection of curry dishes & other family recipes star at this low-key Indian restaurant."
 		},
 		{
@@ -29,7 +34,8 @@
 			"name": "Green Bowl",
 			"type": "Vegan, Salads",
 			"logo": "./assets/images/green-logo.jpg",
-			"address": "3030 N Pepperoni Ave, Suite 200",
+			"address": "3030 N Health Ave, Suite 200",
+			"cost": "$ ($5-$15)",
 			"description": "Wholesome vegan meals with organic produce"
 		},
 		{
@@ -37,7 +43,8 @@
 			"name": "North Italia",
 			"type": "Italian Restaurant",
 			"logo": "./assets/images/north-italia-logo.jpg",
-			"address": "4040 S Salsa Rd, Unit 1B",
+			"address": "4040 S Pesto Rd, Unit 1B",
+			"cost": "$$$ ($50-$60)",
 			"description": "Contemporary takes on Italian classics star at this warehouse-chic trattoria with a lively bar."
 		},
 		{
@@ -46,6 +53,7 @@
 			"type": "Chinese Restaurant",
 			"logo": "./assets/images/china-chili-logo.png",
 			"address": "5050 Healthy Way, Suite 5",
+			"cost": "$ ($15-$25)",
 			"description": "Casual eatery serving regional Chinese dishes & Asian cocktails in a traditionally decorated space."
 		},
 		{
@@ -54,6 +62,7 @@
 			"type": "Coffee Shop",
 			"logo": "./assets/images/cafe-logo.png",
 			"address": "6060 Latte Blvd, Unit 8",
+			"cost": "$ ($15-$25)",
 			"description": "Specialty coffee drinks and fresh pastries."
 		},
 		{
@@ -63,6 +72,7 @@
 			"type": "Barbecue Joint",
 			"logo": "./assets/images/bobby-q-logo.jpg",
 			"address": "7070 BBQ Dr, Block C",
+			"cost": "$$ ($30-40)",
 			"description": "Formerly knowna as Bobby McGee's, Bobby-Q BBQ has been serving great steaks and great barbeque since 2005. Slow cooking over Almond and Mesquite wood paired with the perfect blend of spices results in succulent hand-pulled pork, smoky sausage links, fork-ender brisket and ribs that fall right off the bone."
 
 		}
