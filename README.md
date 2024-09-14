@@ -33,12 +33,12 @@ Usage
 5) Users register as a member when they sign up. To sign up user, follow these steps -  
     o	Click on the sign-up feature from the top menu bar. 
     o	Choose a username.
-    o	Enter email address
+    o	Enter email address.
     o	Choose a password.
 6) Users can access member exclusive features when they login. To login user, follow these steps -
     o	Click on login feature from the top menu bar.
     o	Enter their username.
-    o	Enter password
+    o	Enter password.
     o	Click on sign in.
 
 License
