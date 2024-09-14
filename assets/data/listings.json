@@ -5,10 +5,19 @@
 			"name": "Taco Guild",
 			"type": "Crafted cocktails, local draft beers, authentic and contemporary Mexican dishes",
 			"logo": "./assets/images/taco-guild-logo.jpg",
-			"carousel": "",
 			"address": "1010 W Main St, Unit A",
 			"cost": "$$ ($20-$30)",
-			"description": "Known for its beautiful historic church building, its innovative internationally-inspired taco offerings and list of more than 200 agave spirits, Taco Guild is known for its food quality, wide range of local and global flavors and pushing tacos to their limits."
+			"description": "Known for its beautiful historic church building, its innovative internationally-inspired taco offerings and list of more than 200 agave spirits, Taco Guild is known for its food quality, wide range of local and global flavors and pushing tacos to their limits.",
+			"carousel1": "./assets/images/tacos.jpg",
+			"carousel2": "./assets/images/tacos-2.jpg",
+			"carousel3": "./assets/images/tacos-3.jpg",
+			"carousel4": "./assets/images/tacos-4.jpg",
+			"carousel5": "./assets/images/tacos-5.jpg",
+			"caption": "Succulent Al Pastor tacos!",
+			"caption2": "Fresh and juicy shrimp ceviche is a customer favorite",
+			"caption3": "Rich, tasty birria tacos drench in consumme",
+			"caption4": "House-fried pork skins seasoned with Tajin and lime",
+			"caption5": "Ahi Tuna tosadas with togarashi and gochujang aioli"
 		},
 		{
 			"id": "2",
@@ -18,7 +27,17 @@
 			"carousel": "",
 			"address": "2020 E Sushi Ln, Floor 3",
 			"cost": "$$ ($30-40)",
-			"description": "Vibrant sushi house with a casual ambiance, Both chef and creator, above all else, an artisan of living and eating well, Harumi’s dishes are comprised of a breathing expression of Japanese tradition united in modernity."
+			"description": "Vibrant sushi house with a casual ambiance, Both chef and creator, above all else, an artisan of living and eating well, Harumi’s dishes are comprised of a breathing expression of Japanese tradition united in modernity.",
+			"carousel1": "./assets/images/sushi.jpg",
+			"carousel2": "./assets/images/sushi-2.jpg",
+			"carousel3": "./assets/images/sushi-3.jpg",
+			"carousel4": "./assets/images/sushi-4.jpg",
+			"carousel5": "./assets/images/sushi-5.jpg",
+			"caption": "A variety of rolls featuring both fish and vetegarian options",
+			"caption2": "Signature purple sushi rice rolls topped with tuna and tempura flakes create the perfect bite",
+			"caption3": "Fresh sashimi featuring Alaskan salmon, tuna, albacore and many others everyday",
+			"caption4": "Savory twist on tradition with classic sushi rolls wrapped in vibrant purple rice",
+			"caption5": "Weekly exclusive chef's omakase special"
 		},
 		{
 			"id": "3",
@@ -27,16 +46,36 @@
 			"logo": "./assets/images/curry-corner-logo.png",
 			"address": "3030 N Pepperoni Ave, Suite 200",
 			"cost": "$ ($15-$25)",
-			"description": "A wide selection of curry dishes & other family recipes star at this low-key Indian restaurant."
+			"description": "A wide selection of curry dishes & other family recipes star at this low-key Indian restaurant.",
+			"carousel1": "./assets/images/indian.jpg",
+			"carousel2": "./assets/images/indian-2.jpg",
+			"carousel3": "./assets/images/indian-3.jpg",
+			"carousel4": "./assets/images/indian-4.jpg",
+			"carousel5": "./assets/images/indian-5.jpg",
+			"caption": "Classic chicken masala curry with pillowy naan and aromatic saffron rice",
+			"caption2": "Florets of assorted vegetables fried in a spiced chick pea batter",
+			"caption3": "Chicken wings marinated in a blend of ginger and garlic and many authentic spices",
+			"caption4": "Crisp pastries stuffed with a spicy blend of potatoes and peas",
+			"caption5": "A unique twist to a global favorite, our Tikka Masala fries are a delicious combination of crispy fries tossed and smothered in our signature spicy tikka masala sauce, drizzled with ranch dressing, and sprinkled with crumbly cheese"
 		},
 		{
 			"id": "4",
 			"name": "Green Bowl",
-			"type": "Vegan, Salads",
+			"type": "Vegan, Salads, Veggie Wraps",
 			"logo": "./assets/images/green-logo.jpg",
 			"address": "3030 N Health Ave, Suite 200",
 			"cost": "$ ($5-$15)",
-			"description": "Wholesome vegan meals with organic produce"
+			"description": "Wholesome vegan meals with organic produce",
+			"carousel1": "./assets/images/green.jpg",
+			"carousel2": "./assets/images/green-2.jpg",
+			"carousel3": "./assets/images/green-3.jpg",
+			"carousel4": "./assets/images/green-4.jpg",
+			"carousel5": "./assets/images/green-5.jpg",
+			"caption": "Wholesom medly of fresh veggies, grains and plant-based goodness",
+			"caption2": "Refreshing acai bowl makes for a healthy, sweet treat",
+			"caption3": "Variety of fresh-pressed juice options everday sourced locally",
+			"caption4": "Get any green bowl as a wrap for on-the-go goodness",
+			"caption5": "Creamy chia seet and oats topped with seasonal fruits make a great breakfast option"
 		},
 		{
 			"id": "5",
@@ -45,7 +84,17 @@
 			"logo": "./assets/images/north-italia-logo.jpg",
 			"address": "4040 S Pesto Rd, Unit 1B",
 			"cost": "$$$ ($50-$60)",
-			"description": "Contemporary takes on Italian classics star at this warehouse-chic trattoria with a lively bar."
+			"description": "Contemporary takes on Italian classics star at this warehouse-chic trattoria with a lively bar.",
+			"carousel1": "./assets/images/italian.jpg",
+			"carousel2": "./assets/images/italian-2.jpg",
+			"carousel3": "./assets/images/italian-3.jpg",
+			"carousel4": "./assets/images/italian-4.jpg",
+			"carousel5": "./assets/images/italian-5.jpg",
+			"caption": "",
+			"caption2": "",
+			"caption3": "",
+			"caption4": "",
+			"caption5": ""
 		},
 		{
 			"id": "6",
@@ -54,7 +103,17 @@
 			"logo": "./assets/images/china-chili-logo.png",
 			"address": "5050 Healthy Way, Suite 5",
 			"cost": "$ ($15-$25)",
-			"description": "Casual eatery serving regional Chinese dishes & Asian cocktails in a traditionally decorated space."
+			"description": "Casual eatery serving regional Chinese dishes & Asian cocktails in a traditionally decorated space.",
+			"carousel1": "./assets/images/chinese.jpg",
+			"carousel2": "./assets/images/chinese-2.jpg",
+			"carousel3": "./assets/images/chinese-3.jpg",
+			"carousel4": "./assets/images/chinese-4.jpg",
+			"carousel5": "./assets/images/chinese-5.jpg",
+			"caption": "",
+			"caption2": "",
+			"caption3": "",
+			"caption4": "",
+			"caption5": ""
 		},
 		{
 			"id": "7",
@@ -63,7 +122,17 @@
 			"logo": "./assets/images/cafe-logo.png",
 			"address": "6060 Latte Blvd, Unit 8",
 			"cost": "$ ($15-$25)",
-			"description": "Specialty coffee drinks and fresh pastries."
+			"description": "Specialty coffee drinks and fresh pastries.",
+			"carousel1": "./assets/images/cafe.jpg",
+			"carousel2": "./assets/images/cafe-2.jpg",
+			"carousel3": "./assets/images/cafe-3.jpg",
+			"carousel4": "./assets/images/cafe-4.jpg",
+			"carousel5": "./assets/images/cafe-5.jpg",
+			"caption": "",
+			"caption2": "",
+			"caption3": "",
+			"caption4": "",
+			"caption5": ""
 		},
 		{
 
@@ -73,7 +142,17 @@
 			"logo": "./assets/images/bobby-q-logo.jpg",
 			"address": "7070 BBQ Dr, Block C",
 			"cost": "$$ ($30-40)",
-			"description": "Formerly knowna as Bobby McGee's, Bobby-Q BBQ has been serving great steaks and great barbeque since 2005. Slow cooking over Almond and Mesquite wood paired with the perfect blend of spices results in succulent hand-pulled pork, smoky sausage links, fork-ender brisket and ribs that fall right off the bone."
+			"description": "Formerly knowna as Bobby McGee's, Bobby-Q BBQ has been serving great steaks and great barbeque since 2005. Slow cooking over Almond and Mesquite wood paired with the perfect blend of spices results in succulent hand-pulled pork, smoky sausage links, fork-ender brisket and ribs that fall right off the bone.",
+			"carousel1": "./assets/images/bbq.jpg",
+			"carousel2": "./assets/images/bbq-2.jpg",
+			"carousel3": "./assets/images/bbq-3.jpg",
+			"carousel4": "./assets/images/bbq-4.jpg",
+			"carousel5": "./assets/images/bbq-5.jpg",
+			"caption": "",
+			"caption2": "",
+			"caption3": "",
+			"caption4": "",
+			"caption5": ""
 
 		}
 	]
