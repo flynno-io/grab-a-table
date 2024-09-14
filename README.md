@@ -15,7 +15,7 @@ Features
 9) Login – Allows users to sign in as a member and access member exclusive features.
 
 Installation
-Grab a Table is a web-based application accessible from https://www.grabatable.com
+Grab a Table is a web-based application accessible from [enter github URL]
 
 Usage
 1) Users can access the Website Menu from the top right corner of the website. It allows users to access the following features – 
