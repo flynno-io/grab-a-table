@@ -18,7 +18,11 @@ Installation
 Grab a Table is a web-based application accessible from https://www.grabatable.com
 
 Usage
-1) Users can access the Website Menu from the top right corner of the website. It allows users to access the following features – 1) Home Page, 2) Restaurant reserve page, 3) Login and 4) Sign Up.
+1) Users can access the Website Menu from the top right corner of the website. It allows users to access the following features – 
+    o	Home Page
+    o	Restaurant reserve page
+    o	Login 
+    o	Sign Up
 2) Users can choose a restaurant from featured restaurants accessible from the homepage and restaurant listing cards accessible from restaurant reserve page.
 3) Users can view detailed restaurant profile by clicking on view restaurant button on restaurant listing card. 
 4) Users can reserve a table in a restaurant by clicking on the reserve table button accessible from featured restaurants on the homepage and restaurant listing cards. Users see a confirmation page along with a table number reserved for every successful reservation. To reserve a table user, follow these steps –
