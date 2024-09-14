@@ -10,6 +10,8 @@ const selecteddatetime = document.querySelector("#result");
 const tablenumber = document.getElementById("randomNumber");
 
 
+
+
 //
 /* reservebutton.onclick = function() {
     modal.style.display = "block";
@@ -28,7 +30,9 @@ function reserveatable(event) {
     const userData = {
         name: document.getElementById("name").value,
         email: document.getElementById("exampleInputEmail1").value,
-        dateAndTime: document.getElementById("result").value,
+        date: document.getElementById("dateInput").value,
+        time: document.getElementById("timeInput").value,
+        guest:document.getElementById("guest").value,
         tableNumber: Math.floor(Math.random() * 10) + 1,
     };
     localStorage.setItem("userData", JSON.stringify(userData));
@@ -71,11 +75,12 @@ $(document).ready(function(){
 function updateDateTime() {
     const date = document.getElementById('dateInput').value;
     const time = document.getElementById('timeInput').value;
+    const guest = document.getElementById('guest').value;
     
-    if (date && time) {
-        const result = `${date} ${time}`;
+    if (date && time && guest) {
+        const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`;
         document.getElementById('result').value = result;
     } else {
-        alert('Please select both date and time.');
+        alert('Please select date, time and number of guest.');
     }
 }
