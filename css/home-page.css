@@ -7,33 +7,24 @@
 }
 
 .carousel-item>img {
-    height: 500px;
+    height: 30rem;
     width: 100%;
     object-fit: cover;
 }
 
 .carousel-caption {
-    text-align: left;
-    padding: 10px 20px;
     background-color: rgb(24, 28, 20, 0.6);
-    border-radius: 5px;
-    margin-bottom: 1rem
 }
 
-.carousel-caption>h5 {
-    font-size: 1.25rem
+.carousel-caption>h5.carousel-item-h5 {
+    font-size: 1.4rem !important;
 }
 
-.carousel-caption>p {
-    font-size: .95rem;
-}
-
-.carousel-indicators {
-    bottom: 0;
+div.carousel-caption>p.carousel-description  {
+    font-size: 1rem !important;
 }
 
 /*///// HERO TITLE /////*/
-
 .hero-title {
     border-bottom: 4px solid darkorange;
 }
@@ -42,12 +33,18 @@
 section.tutorial>.container {
     flex: 1 2 300px;
     height: 200px;
-    font-size: 1.25rem;
 }
 
 .tutorial>h2 {
-    font-size: 3rem;
     flex: 2 1 200px;
+}
+
+.tutorial .container svg.step-icon {
+    width: 4rem;
+}
+
+.tutorial .container svg.step-icon>path {
+    fill: #274156; /* charcoal */
 }
 
 /*///// CUSTOMER REVIEWS /////*/
@@ -55,34 +52,22 @@ section.tutorial>.container {
 .customer-reviews>h2 {
     border-bottom: 4px solid darkorange;
 }
-.reviews {
-    display: flex;
-    flex-flow: column nowrap;
-    column-gap: .5rem;
-}
 
 .reviews>.card {
-    flex: 1 1 150px;
-}
-
-.reviews>.card>.card-header {
-    font-size: 1.25rem;
-    display: flex;
-    align-items: last baseline;
-    column-gap: .4rem;
-}
-
-.reviews>.card>.card-body {
-    row-gap: 4px;
+    flex: 1 1 100px;
 }
 
 .reviews>.card>.card-body>blockquote {
     font-style: italic;
-    color: #032D3C;
+    color: #032D3C; 
 }
 
 .quotations {
     width: 30px;
+}
+
+svg.quotations>path {
+    fill: #274156; /* charcoal */
 }
 
 .quotations.left {
@@ -109,7 +94,10 @@ section.tutorial>.container {
 
 /* For devices ≥576px */
 @media (min-width: 576px) {
-
+    .tutorial>h2 {
+        flex: 2 1 100%;
+        text-align: center;
+    }
 }
 
 /* For devices ≥768px */ 
@@ -118,6 +106,19 @@ section.tutorial>.container {
         left: 20%;
         right: 20%;
     }
+
+    .tutorial>h2 {
+        text-align: center;
+    }
+
+    .tutorial .container {
+        flex: 1 2 50%;
+    }
+
+    .tutorial>.container>.step-text {
+        font-size: 1.10rem !important;
+    }
+
 }
 
 /* For devices ≥992px */
@@ -129,8 +130,8 @@ section.tutorial>.container {
     }
 }
 
-/* For devices ≥992px */
-@media (min-width: 1600px) {
+/* For devices ≥1200px */
+@media (min-width: 1200px) {
     .carousel-caption {
         left: 35%;
         right: 35%;
@@ -144,5 +145,10 @@ section.tutorial>.container {
     .carousel-caption>p {
         font-size: 1.15rem;
     }
-    
+
+    .tutorial>h2 {
+        flex: 2 1 30%;
+        text-align: center;
+    }
+
 }
