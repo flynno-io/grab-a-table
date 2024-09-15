@@ -46,6 +46,5 @@ Grab a Table is a web-based application accessible from [enter github URL]
 License
 MIT
 
-Contact
-If you have any questions, please contact – Luke Flynn, Jacqueline Nguyen, Amit Nandy and Juan 
+Contact if you have any questions, please contact – Luke Flynn, Jacqueline Nguyen, Amit Nandy and Juan 
 
