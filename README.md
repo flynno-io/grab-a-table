@@ -5,16 +5,15 @@
 ## Description
 Grab a table is a restaurant listing app that allows users to find and reserve a table at a participating local restaurant.
 
-## Features
-1. **Website Menu** – Allows users to navigate Grab a Table website.
-2. **Home Page** – Introduces users to Grab a Table and benefits it offers.
-3. **Featured Restaurants** – Displays sponsored ads and popular local restaurants. 
-4. **Restaurant Reserve Page** – Allows users to view all the restaurant listings in one place.
-5. **Restaurant Listing card** – Allows users to view key inputs of the restaurant such as “Name”, “Description” and “Specialty”. 
-6. **View Restaurant** – Allows users to view a detailed profile page of the restaurant.
-7. **Reserve Table** - Allows users to share inputs needed to reserve a table in a restaurant and view confirmation for every successful reservation.
-8. **Sign Up** – Allows users to sign up as a member of Grab a Table.
-9. **Login** – Allows users to sign in as a member and access member exclusive features.
+Features
+1) Website Menu – Allows users to navigate Grab a Table website.
+2) Home Page – Introduces users to Grab a Table, how it works and customer reviews.
+3) Restaurant reserve page – Allows users to browse restaurant listings in one place.
+5) Restaurant listing card – Allows users to view key inputs of a restaurant such as name, address, description, cuisine and specialty. 
+6) View restaurant – Allows users to view profile page of the restaurant.
+7) Reserve table - Allows users to share inputs needed to reserve a table in a restaurant and view confirmation for every successful reservation.
+8) Sign Up – Allows users to sign up as a member of Grab a Table.
+9) Login – Allows users to sign in as a member and access member exclusive features.
 
 ## Installation
 Grab a Table is a web-based application accessible from [enter github URL]
@@ -46,5 +45,5 @@ Grab a Table is a web-based application accessible from [enter github URL]
 License
 MIT
 
-Contact if you have any questions, please contact – Luke Flynn, Jacqueline Nguyen, Amit Nandy and Juan 
-
+Contact
+If you have any questions, please contact – Luke Flynn, Jacqueline Nguyen, Amit Nandy and Juan.
