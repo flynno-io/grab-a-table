@@ -1,14 +1,14 @@
 /* styles.css */
 
 :root {
-    --bs-primary: #FF8C00; /* Changing primary color to a custom orange */
-    --bs-secondary: #6c757d; /* Custom secondary color */
-    --bs-success: #28a745; /* Custom success color */
-    --bs-info: #17a2b8; /* Custom info color */
-    --bs-warning: #ffc107; /* Custom warning color */
-    --bs-danger: #dc3545; /* Custom danger color */
-    --bs-light: #f8f9fa; /* Custom light color */
-    --bs-dark: #343a40; /* Custom dark color */
+    --bs-primary: #FF8C00 !important; /* Changing primary color to a dark orange */
+    --bs-secondary: #6c757d !important; /* Custom secondary color */
+    --bs-success: #28a745 !important; /* Custom success color */
+    --bs-info: #17a2b8 !important; /* Custom info color */
+    --bs-warning: #ffc107 !important; /* Custom warning color */
+    --bs-danger: #dc3545 !important; /* Custom danger color */
+    --bs-light: #f8f9fa !important; /* Custom light color */
+    --bs-dark: #343a40 !important; /* Custom dark color */
 }
 
 /*///// GLOBAL STYLES /////*/
@@ -74,11 +74,11 @@ main {
     /* background-color: #F5F5F5; */
 }
 
-/* For devices ≥576px */
-@media (min-width: 576px) {
-    .nav-logo {
-        font-size: 1.5rem;
-    }
+/*///// FOOTER /////*/
+
+a.footer-icon>img {
+    width: 2.4rem;
+    margin-right: .5rem;
 }
 
 /*///// COMPONENT STYLES /////*/
@@ -95,7 +95,15 @@ main {
     color: white;
 }
 
-/* TODO: customize styles for nav-logo on each break point */
+/*///// MEDIA QUERIES /////*/
+
+/* For devices ≥576px */
+@media (min-width: 576px) {
+    .nav-logo {
+        font-size: 1.5rem;
+    }
+}
+
 /* For devices ≥768px */ 
 @media (min-width: 768px) { 
     /* insert styles */
