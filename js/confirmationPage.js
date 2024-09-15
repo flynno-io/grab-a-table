@@ -7,7 +7,7 @@ class ConfirmationPage extends HTMLElement {
 
     render() {
         this.innerHTML = `
-            <section>
+            <section id="confirmation-page">
                 <div class="container text-center">
                     <div class="row align-items-center">
                     </div>
