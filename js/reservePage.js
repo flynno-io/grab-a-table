@@ -17,20 +17,14 @@ class ReservePage extends HTMLElement {
         return await response.json();
     }
 
-    static css = `
-        h1 { color: orange; }
-    `
-
     // Render the component based on fetched data
     render(data) {
         const listings = data.listings
         this.innerHTML = `
-            <style>${ReservePage.css}</style>
-
-            <section>
-                <h1>Reserve a table</h1>
-                <p>Click on a restaurant and 'reserve a table'</p>
-                <div id="listings_div"></div>
+            <section class="reserve-page-title container-fluid m-0 p-3 text-center text-dark">
+                <h1 class="mb-3 pb-2 mx-sm-5">Reserve a Table</h1>
+                <p class="mb-4 mx-sm-5 text-start">Browse through the participating restaurants. Click 'View restaurant' to read learn more or click 'Reserve Table' if you like what you see.</p>
+                <div id="listings_div" class="d-flex flex-row align-items-start justify-content-center flex-wrap gap-3"></div>
             </section>
         `
 
