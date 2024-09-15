@@ -183,37 +183,3 @@ window.addEventListener("hashchange", () => {
 window.onbeforeunload = function () {
 	window.scrollTo(0, 0)
 }
-
-// set up functions for a HTML/JS Single Page Application
-document.addEventListener("DOMContentLoaded", () => {
-	// Event listeners for navigation buttons
-	// homeTab.addEventListener("click", (e) => {
-	// 	e.preventDefault()
-	// 	addActiveClass(e.target)
-	// 	appendPageToContainer("home-page")
-	// 	updateURL("home")
-	//     updateBrowserHistory("home")
-	// })
-	// reserveTab.addEventListener("click", (e) => {
-	// 	e.preventDefault()
-	// 	addActiveClass(e.target)
-	// 	appendPageToContainer("reserve-page")
-	// 	updateURL("reserve")
-	//     updateBrowserHistory("reserve")
-	// })
-	// loginTab.addEventListener("click", (e) => {
-	// 	e.preventDefault()
-	// 	addActiveClass(e.target)
-	// 	appendPageToContainer("login-page")
-	// 	updateURL("login")
-	//     updateBrowserHistory("login")
-	// })
-	// signupTab.addEventListener("click", (e) => {
-	// 	e.preventDefault()
-	// 	addActiveClass(e.target)
-	// 	appendPageToContainer("signup-page")
-	// 	updateURL("signup")
-	//     updateBrowserHistory("signup")
-	// })
-	// TODO: identify how to load the Confirm page after clicking 'submit' on reserve form
-})
