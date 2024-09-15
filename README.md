@@ -5,11 +5,10 @@ Grab a table is a restaurant listing app that allows users to find and reserve a
 
 Features
 1) Website Menu – Allows users to navigate Grab a Table website.
-2) Home Page – Introduces users to Grab a Table and benefits it offers.
-3) Featured restaurants – Displays sponsored ads and popular local restaurants. 
-4) Restaurant reserve page – Allows users to view all the restaurant listings in one place.
-5) Restaurant listing card – Allows users to view key inputs of the restaurant such as “Name”, “Description” and “Specialty”. 
-6) View restaurant – Allows users to view a detailed profile page of the restaurant.
+2) Home Page – Introduces users to Grab a Table, how it works and customer reviews.
+3) Restaurant reserve page – Allows users to browse restaurant listings in one place.
+5) Restaurant listing card – Allows users to view key inputs of a restaurant such as name, address, description, cuisine and specialty. 
+6) View restaurant – Allows users to view profile page of the restaurant.
 7) Reserve table - Allows users to share inputs needed to reserve a table in a restaurant and view confirmation for every successful reservation.
 8) Sign Up – Allows users to sign up as a member of Grab a Table.
 9) Login – Allows users to sign in as a member and access member exclusive features.
@@ -45,5 +44,4 @@ License
 MIT
 
 Contact
-If you have any questions, please contact – Luke Flynn, Jacqueline Nguyen, Amit Nandy and Juan 
-
+If you have any questions, please contact – Luke Flynn, Jacqueline Nguyen, Amit Nandy and Juan.
