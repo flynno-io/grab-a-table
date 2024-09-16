@@ -1,14 +1,22 @@
-/* styles.css */
+/* css/global.css */
 
 :root {
-    --bs-primary: #FF8C00 !important; /* Changing primary color to a dark orange */
-    --bs-secondary: #6c757d !important; /* Custom secondary color */
-    --bs-success: #28a745 !important; /* Custom success color */
-    --bs-info: #17a2b8 !important; /* Custom info color */
-    --bs-warning: #ffc107 !important; /* Custom warning color */
-    --bs-danger: #dc3545 !important; /* Custom danger color */
-    --bs-light: #f8f9fa !important; /* Custom light color */
-    --bs-dark: #343a40 !important; /* Custom dark color */
+    --bs-primary: #FF8C00 !important;
+    /* Changing primary color to a dark orange */
+    --bs-secondary: #6c757d !important;
+    /* Custom secondary color */
+    --bs-success: #28a745 !important;
+    /* Custom success color */
+    --bs-info: #17a2b8 !important;
+    /* Custom info color */
+    --bs-warning: #ffc107 !important;
+    /* Custom warning color */
+    --bs-danger: #dc3545 !important;
+    /* Custom danger color */
+    --bs-light: #f8f9fa !important;
+    /* Custom light color */
+    --bs-dark: #343a40 !important;
+    /* Custom dark color */
 }
 
 /*///// GLOBAL STYLES /////*/
@@ -37,7 +45,7 @@ nav {
 .nav-logo:hover>img,
 .nav-logo:focus>img,
 .nav-logo.active>img {
-    content: url(../assets//icons/reserved_white.png)
+    content: url(/grab-a-table/assets//icons/reserved_white.png)
 }
 
 .nav-logo>img {
@@ -51,6 +59,7 @@ nav {
 .navbar {
     font-size: 1.15rem;
 }
+
 a.nav-link {
     cursor: pointer;
     margin: .75rem;
@@ -84,14 +93,19 @@ a.footer-icon>img {
 /*///// COMPONENT STYLES /////*/
 
 .btn {
-    background-color: #BBBDF6; /* Periwinkle */
-    border-color: #BBBDF6; /* Periwinkle */
+    background-color: #BBBDF6;
+    /* Periwinkle */
+    border-color: #BBBDF6;
+    /* Periwinkle */
     color: black;
 }
 
-.btn:hover, .btn:focus {
-    background-color: darkorange; /* Periwinkle */
-    border-color: darkorange; /* Periwinkle */
+.btn:hover,
+.btn:focus {
+    background-color: darkorange;
+    /* Periwinkle */
+    border-color: darkorange;
+    /* Periwinkle */
     color: white;
 }
 
@@ -104,8 +118,8 @@ a.footer-icon>img {
     }
 }
 
-/* For devices ≥768px */ 
-@media (min-width: 768px) { 
+/* For devices ≥768px */
+@media (min-width: 768px) {
     /* insert styles */
 }
 

@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,32 +8,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- Favicons -->
-        <link rel="icon" href="./assets/icons/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="./assets/icons/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="/grab-a-table/assets/icons/favicon-32x32.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="/grab-a-table/assets/icons/favicon-16x16.png" sizes="16x16" type="image/png">
 
         <!-- Bootstrap via CDN -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous" 
-        />
+            crossorigin="anonymous" />
 
         <!-- Google Font: Urbanist -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet" 
-        />
+            rel="stylesheet" />
 
         <!-- External CSS Sheets -->
-        <link rel="stylesheet" href="./css/global.css" />
-        <link rel="stylesheet" href="./css/home-page.css" />
-        <link rel="stylesheet" href="./css/reserve-page.css" />
-        <link rel="stylesheet" href="./css/listing-page.css" />
-        <link rel="stylesheet" href="./css/listing-card.css" />
-        <link rel="stylesheet" href="./css/login-page.css" />
-        <link rel="stylesheet" href="./css/signup-page.css" />
-        <link rel="stylesheet" href="./css/confirmation-page.css" />
-        <link rel="stylesheet" href="./css/notFound-page.css" />
+        <link rel="stylesheet" href="css/global.css" />
+        <link rel="stylesheet" href="css/home-page.css" />
+        <link rel="stylesheet" href="css/reserve-page.css" />
+        <link rel="stylesheet" href="css/listing-page.css" />
+        <link rel="stylesheet" href="css/listing-card.css" />
+        <!-- FIXME: <link rel="stylesheet" href="css/reservation-form.css"  -> when these styles are applied, the reserve modal breaks/> -->
+        <link rel="stylesheet" href="css/login-page.css" />
+        <link rel="stylesheet" href="css/signup-page.css" />
+        <link rel="stylesheet" href="css/confirmation-page.css" />
+        <link rel="stylesheet" href="css/not-found-page.css" />
 
         <!-- Website Title -->
         <title>Grab a Table</title>
@@ -43,7 +44,7 @@
             <nav class="navbar">
                 <div class="container-fluid d-flex flex-column flex-sm-row">
                     <a class="nav-logo navbar-brand ml-sm-3 mb-0 h1 m-0 p-0" href="/">
-                        <img src="./assets/icons/reserved_black.png" alt="Card with checkmark"
+                        <img src="/grab-a-table/assets/icons/reserved_black.png" alt="Card with checkmark"
                             class="d-inline-block align-text-center" />
                         Grab a Table
                     </a>
@@ -66,7 +67,7 @@
             <!-- Reservation Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog my-4 mx-3 mx-sm-auto p-1">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Reserve a Table</h1>
@@ -133,16 +134,18 @@
                     <div class="col-md-4 mb-3">
                         <a class="footer-icon d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none"
                             href="#/home" aria-label="Grab-a-Table">
-                            <img src="./assets/icons/reserved_black.png" alt="Card with checkmark" class="d-inline-block align-text-center" />
+                            <img src="/grab-a-table/assets/icons/reserved_black.png" alt="Card with checkmark"
+                                class="d-inline-block align-text-center" />
                             <span class="fs-5">Grab a Table</span>
                         </a>
                         <ul class="list-unstyled small">
                             <li class="mb-2">Designed and built by the Web Wizards of the U of U Coding Bootcamp.
                             </li>
-                            <li class="mb-2">Code licensed <a href="https://github.com/flynno-io/grab-a-table/blob/development/LICENSE"
-                                    target="_blank" >MIT</a>, docs <a
-                                    href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank"
-                                    >CC BY 4.0</a>.</li>
+                            <li class="mb-2">Code licensed <a
+                                    href="https://github.com/flynno-io/grab-a-table/blob/development/LICENSE"
+                                    target="_blank">MIT</a>, docs <a
+                                    href="https://creativecommons.org/licenses/by/4.0/deed.en" target="_blank">CC BY
+                                    4.0</a>.</li>
                             <li class="mb-2">Currently v0.1.0</li>
                         </ul>
                     </div>
@@ -160,29 +163,28 @@
                         <ul class="list-unstyled">
                             <li class="mb-2">
                                 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank"
-                                rel="noopener">HTML 5</a>
+                                    rel="noopener">HTML 5</a>
                             </li>
                             <li class="mb-2">
-                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank"
-                                rel="noopener">Web Components</a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components"
+                                    target="_blank" rel="noopener">Web Components</a>
                             </li>
-                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/" target="_blank"
-                                    rel="noopener">Bootstrap 5</a>
+                            <li class="mb-2"><a href="https://getbootstrap.com/docs/5.2/getting-started/introduction/"
+                                    target="_blank" rel="noopener">Bootstrap 5</a>
                             </li>
                             <li class="mb-2">
                                 <a href="https://262.ecma-international.org/6.0/" target="_blank"
                                     rel="noopener">Ecmascript 6</a>
                             </li>
                             <li class="mb-2">
-                                <a href="https://fontawesome.com/" target="_blank"
-                                    rel="noopener">Font Awesome Icons</a>
+                                <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome Icons</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-5 col-md-2 mb-3">
                         <h5>Team</h5>
                         <!-- TODO: add team member github URLs to respective <li><a> -->
-                        <ul class="list-unstyled"> 
+                        <ul class="list-unstyled">
                             <li class="mb-2"><a href="#" target="_blank">Amit Nandy</a></li>
                             <li class="mb-2"><a href="https://github.com/flynno-io" target="_blank">Luke Flynn</a></li>
                             <li class="mb-2"><a href="#" target="_blank">Jacqueline Nguyen</a></li>
@@ -202,6 +204,7 @@
         <script defer src="js/reservePage.js"></script>
         <script defer src="js/listingCard.js"></script>
         <script defer src="js/listingPage.js"></script>
+        <script defer src="js/reservationForm.js"></script>
         <script defer src="js/confirmationPage.js"></script>
         <script defer src="js/notFoundPage.js"></script>
 
@@ -225,9 +228,6 @@
         <!-- Bootstrap Datepicker JS -->
         <script defer
             src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
-
-        <!-- Bootstrap Datepicker JS -->
-        <script defer src="js\reservationForm.js"></script>
 
         <!-- Encryption module: Crypto JS -->
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>

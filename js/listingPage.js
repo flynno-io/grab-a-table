@@ -21,7 +21,7 @@ class ListingPage extends HTMLElement {
 
     // Fetch data using async/await
     async fetchData() {
-        const response = await fetch('../assets/data/listings.json');
+        const response = await fetch('/grab-a-table/assets/data/listings.json');
         
         // Handle potential HTTP errors
         if (!response.ok) {
@@ -39,8 +39,8 @@ class ListingPage extends HTMLElement {
                         <div class="my-4 p-0 col-lg-6 col-md-12 col-sm-12">
                             <img src="${listingObj.logo}" class="w-50" alt="${listingObj.altText}">
                         </div>
-                        <div class="col-lg-6 col-md-12 col-sm-12">
-                            <h1 class="display-1 fw-bold .text-left">${listingObj.name} </h1>
+                        <div class="col-lg-6 col-md-12 col-sm-12 align-self-center">
+                            <h1 class="display-1 fw-bold text-left">${listingObj.name} </h1>
                         </div>
                     </div>
                 </div>       
@@ -51,30 +51,30 @@ class ListingPage extends HTMLElement {
                     <div class="row">
                         <div class="">
                             <dl class="mx-3 my-1 m-0 mx-3 p-1 d-flex flew-nowrap align-items-start text-start border-top">
-                                <dt class="fs-5 me-2 pe-4">Description:</dt>
-                                <dd class="fs-5 m-0 ms-3 p-0">${listingObj.description}</dd>
+                                <dt class="fs-6 me-2 pe-4">Description:</dt>
+                                <dd class="fs-6 m-0 ms-3 p-0">${listingObj.description}</dd>
                             </dl>
                         </div>
                     </div>
                     <div class="row">
                         <div class="">
                             <dl class="mx-3 my-1 m-0 mx-3 p-1 d-flex flew-nowrap align-items-start text-start border-top">
-                                <dt class="fs-5 me-2 pe-4">Address:</dt>
-                                <dd class="fs-5 m-0 ms-3 p-0">${listingObj.address}</dd>
+                                <dt class="fs-6 me-2 pe-4">Address:</dt>
+                                <dd class="fs-6 m-0 ms-3 p-0">${listingObj.address}</dd>
                             </dl>
                         </div>
                     </div>
                     <div class="row">
                         <div class="">
                             <dl class="mx-3 my-1 m-0 mx-3 p-1 d-flex flew-nowrap align-items-start text-start border-top">
-                                <dt class="fs-5 me-2 pe-4">Cuisines:</dt>
-                                <dd class="fs-5 m-0 ms-3 p-0">${listingObj.type}</dd>
+                                <dt class="fs-6 me-2 pe-4">Cuisines:</dt>
+                                <dd class="fs-6 m-0 ms-3 p-0">${listingObj.type}</dd>
                             </dl>
                         </div>
                         <div class="mb-4">
                             <dl class="mx-3 my-1 m-0 mx-3 p-1 d-flex flew-nowrap align-items-start text-start border-top border-bottom">
-                                <dt class="fs-5 me-2 pe-4">Average Cost:</dt>
-                                <dd class="fs-5 m-0 ms-3 p-0">${listingObj.cost}</dd>
+                                <dt class="fs-6 me-2 pe-4">Average Cost:</dt>
+                                <dd class="fs-6 m-0 ms-3 p-0">${listingObj.cost}</dd>
                             </dl>
                         </div>
                     </div>

@@ -1,11 +1,11 @@
-/* css/notFound-page.css */
+/* css/not-found-page.css */
 
 .pnf-wrapper {
     height: 100vh;
     display: flex;
     justify-content: center;
     object-fit: contain;
-    background-image: url(../assets/images/empty_restaurant.jpeg);
+    background-image: url(/grab-a-table/assets/images/empty_restaurant.jpeg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }

@@ -1,3 +1,5 @@
+// js/reservationForm.js
+
 //select variable to select required elements in the reservation form
 const modal = document.querySelector(".modalDialog")
 const modalReserveTable = document.querySelector(".modalReserveTable")
@@ -10,7 +12,7 @@ const guest = document.getElementById("guest")
 const selectedDateTime = document.querySelector("#result")
 const tableNumber = document.getElementById("randomNumber")
 
-//function to grab the entries in the reservation form and save it in local storage. 
+//function to grab the entries in the reservation form and save it in local storage.
 // The function also shows an error if the user has left any field blank.
 
 function reserveATable(event) {
@@ -22,8 +24,8 @@ function reserveATable(event) {
 		element.style = "color:red"
 		return
 	}
-    
-    // define user data upon successful form completion
+
+	// define user data upon successful form completion
 	const userData = {
 		name: fName.value,
 		email: emailAddress.value,
@@ -42,12 +44,12 @@ function reserveATable(event) {
 
 // Function to close the modal
 function triggerCloseModalButton() {
-    fName.value = ''
-    emailAddress.value = ''
-    date.value = ''
-    time.value = ''
-    guest.value = ''
-    document.getElementById("result").value = ''
+	fName.value = ""
+	emailAddress.value = ""
+	date.value = ""
+	time.value = ""
+	guest.value = ""
+	document.getElementById("result").value = ""
 	const closeButton = document.querySelector(".modalClose")
 	if (closeButton) {
 		closeButton.click() // FIXME: hack to get the modal to close when 'Reserve' is selected
@@ -58,23 +60,23 @@ function triggerCloseModalButton() {
 
 //function for date picker in the reservation form.
 $(document).ready(function () {
-    $(".datepicker").datepicker({
-        format: "yyyy-mm-dd",
+	$(".datepicker").datepicker({
+		format: "yyyy-mm-dd",
 		autoclose: true,
 		todayHighlight: true,
 	})
 })
 
 function updateDateTime() {
-    const date = document.getElementById("dateInput").value
+	const date = document.getElementById("dateInput").value
 	const time = document.getElementById("timeInput").value
 	const guest = document.getElementById("guest").value
-    
+
 	if (date && time && guest) {
-        const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`
+		const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`
 		document.getElementById("result").value = result
 	} else {
-        alert("Please select date, time and number of guest.")
+		alert("Please select date, time and number of guest.")
 	}
 }
 
