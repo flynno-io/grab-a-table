@@ -1,10 +1,9 @@
 //select variable to select required elements in the reservation form
 const modal = document.querySelector(".modalDialog")
-const reserveButton = document.querySelector(".reserveTable")
 const modalReserveTable = document.querySelector(".modalReserveTable")
 const reserveForm = document.getElementById("userForm")
 const fName = document.querySelector("#name")
-const emailAddress = document.querySelector("#exampleInputEmail1")
+const emailAddress = document.querySelector("#modal-email")
 const date = document.getElementById("dateInput")
 const time = document.getElementById("timeInput")
 const guest = document.getElementById("guest")
@@ -14,31 +13,8 @@ const tableNumber = document.getElementById("randomNumber")
 //function to grab the entries in the reservation form and save it in local storage. 
 // The function also shows an error if the user has left any field blank.
 
-function checkIsLoggedIn() {
-    // Retrieve the boolean string from session storage
-    const storedIsLoggedIn = sessionStorage.getItem('isLoggedIn');
-    if (!storedIsLoggedIn) { return false }
-
-    // Convert the string back to a boolean
-    const isLoggedInBoolean = storedIsLoggedIn === 'true';
-    
-    // set variable on
-    return isLoggedInBoolean
-}
-
 function reserveATable(event) {
 	event.preventDefault()
-
-    // check if user is logged in
-    const isLoggedIn = checkIsLoggedIn()
-
-    // if user is logged in, set their form fields for them
-    if (isLoggedIn) {
-        const userCredentials = JSON.parse(sessionStorage.getItem("userCredentials"))
-        console.log(userCredentials)
-        fName.value =`${userCredentials.firstName} ${userCredentials.lastName}`
-        emailAddress.value = userCredentials.email
-    }
 
 	if (!fName.value || !emailAddress.value || !result.value) {
 		let element = document.querySelector("#error")
