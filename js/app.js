@@ -62,7 +62,7 @@ function loadPage(page, id = null) {
 			addActiveClass(reserveTab)
 			appendPageToContainer("listing-page", id)
 			updateURL(`reserve/listing/${id}`)
-			// updateBrowserHistory(`reserve/listing/${id}`)
+			updateBrowserHistory(`reserve/listing/${id}`)
 			break
 		case "login":
 			addActiveClass(loginTab)
@@ -135,7 +135,7 @@ function updateURL(path) {
 	}
 	const baseURL = getBaseURL()
 	window.history.pushState({}, "", `${baseURL}/#/${path}`) // Update code to work with #/listing/{id}
-    // load the web component page at the top
+	// load the web component page at the top
 	window.scrollTo({
 		top: 0,
 		left: 0,

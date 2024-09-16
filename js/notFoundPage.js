@@ -4,7 +4,7 @@ class NotFoundPage extends HTMLElement {
 	constructor() {
 		super()
 	}
-    
+
 	render() {
 		this.innerHTML = `
             <section class="pnf-wrapper">

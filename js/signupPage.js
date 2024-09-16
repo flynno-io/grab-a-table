@@ -39,20 +39,22 @@ class SignupPage extends HTMLElement {
         `
 	}
 
-    isLoggedIn() {
-        // Retrieve the boolean string from session storage
-        const storedIsLoggedIn = sessionStorage.getItem('isLoggedIn');
-        if (!storedIsLoggedIn) { return false }
+	isLoggedIn() {
+		// Retrieve the boolean string from session storage
+		const storedIsLoggedIn = sessionStorage.getItem("isLoggedIn")
+		if (!storedIsLoggedIn) {
+			return false
+		}
 
-        // Convert the string back to a boolean
-        const isLoggedInBoolean = storedIsLoggedIn === 'true';
-        
-        // set variable on
-        return isLoggedInBoolean
-    }
+		// Convert the string back to a boolean
+		const isLoggedInBoolean = storedIsLoggedIn === "true"
+
+		// set variable on
+		return isLoggedInBoolean
+	}
 
 	connectedCallback() {
-        let isLoggedIn = this.isLoggedIn()
+		let isLoggedIn = this.isLoggedIn()
 		this.render()
 
 		//select variable to select required elements in the reservation form
@@ -64,12 +66,13 @@ class SignupPage extends HTMLElement {
 		const confirmPassword = document.getElementById("signup-confirm-password")
 		const error = document.getElementById("signup-error")
 		const signUpForm = document.getElementById("signup-form")
-        const signupContainer = document.querySelector(".signup-wrapper")
+		const signupContainer = document.querySelector(".signup-wrapper")
 
 		function signup(event) {
 			event.preventDefault()
 
-			if ( // check that all values are completed
+			if (
+				// check that all values are completed
 				!fname.value ||
 				!lname.value ||
 				!username.value ||
@@ -79,39 +82,44 @@ class SignupPage extends HTMLElement {
 			) {
 				error.innerHTML = "Please add all required information!"
 				return
-			} else if (password.value.length < 8) { // ensures password is at least 8 characters
+			} else if (password.value.length < 8) {
+				// ensures password is at least 8 characters
 				error.innerHTML = "Password must be more than 8 characters"
 				return
-			} else if (password.value != confirmPassword.value) { // ensures no errors in the final password
+			} else if (password.value != confirmPassword.value) {
+				// ensures no errors in the final password
 				error.innerHTML = "Please ensure your passwords match"
 				return
 			} else {
-                error.innerHTML = ''
+				error.innerHTML = ""
 
-                // create User Credential object
-                const userCredentials = {
-                    firstName: fname.value,
-                    lastName: lname.value,
-                    username: username.value,
-                    email: email.value,
-                    password: confirmPassword.value,
-                }
+				// create User Credential object
+				const userCredentials = {
+					firstName: fname.value,
+					lastName: lname.value,
+					username: username.value,
+					email: email.value,
+					password: confirmPassword.value,
+				}
 
-                // encrypt the data
-                const encryptedUserCredentials = encryptData(userCredentials)
+				// encrypt the data
+				const encryptedUserCredentials = encryptData(userCredentials)
 
-                // save encrypted data to local storage
-                localStorage.setItem("userCredentials", encryptedUserCredentials)
+				// save encrypted data to local storage
+				localStorage.setItem("userCredentials", encryptedUserCredentials)
 
-                // Save user credentials to the session too
-                sessionStorage.setItem('userCredentials', JSON.stringify(userCredentials))
+				// Save user credentials to the session too
+				sessionStorage.setItem(
+					"userCredentials",
+					JSON.stringify(userCredentials)
+				)
 
-                // Set 'IsLoggedIn' to 'true'
-                isLoggedIn = true
-                sessionStorage.setItem('isLoggedIn', isLoggedIn.toString());
+				// Set 'IsLoggedIn' to 'true'
+				isLoggedIn = true
+				sessionStorage.setItem("isLoggedIn", isLoggedIn.toString())
 
-                console.log('Sign up successful!')
-                signupContainer.innerHTML = `
+				console.log("Sign up successful!")
+				signupContainer.innerHTML = `
                     <div class="signup-confirmation d-flex flex-column m-1 p-4 border-1">
                         <h1>${userCredentials.firstName}, Success!</h1>
                         <p>Now when you click on 'Reserve a Table' your data will populate automatically.</p>
@@ -119,36 +127,40 @@ class SignupPage extends HTMLElement {
                         <a class="btn" href="#/reserve">Begin browsing your next reservation</a>
                     </div>
                 `
-            }
+			}
 		}
 
-        function encryptData(obj) {
-            // Secret key for encryption/decryption
-            const secretKey = "gat-aljj-20240805"; // normally would be stored on server
+		function encryptData(obj) {
+			// Secret key for encryption/decryption
+			const secretKey = "gat-aljj-20240805" // normally would be stored on server
 
-            // Convert object to string for encryption
-            const credentialsString = JSON.stringify(obj);
+			// Convert object to string for encryption
+			const credentialsString = JSON.stringify(obj)
 
-            // Encrypt the string using AES
-            const encryptedCredentials = CryptoJS.AES.encrypt(credentialsString, secretKey).toString();
+			// Encrypt the string using AES
+			const encryptedCredentials = CryptoJS.AES.encrypt(
+				credentialsString,
+				secretKey
+			).toString()
 
-            return encryptedCredentials
-        }
+			return encryptedCredentials
+		}
 
-        if (isLoggedIn) {
-            const userCredentials = JSON.parse(sessionStorage.getItem('userCredentials'))
-            signupContainer.innerHTML = `
+		if (isLoggedIn) {
+			const userCredentials = JSON.parse(
+				sessionStorage.getItem("userCredentials")
+			)
+			signupContainer.innerHTML = `
                 <div class="signup-confirmation d-flex flex-column m-1 p-4 border-1">
                     <h1>${userCredentials.firstName}, you are logged in.</h1>
                     <p>When you click on 'Reserve a Table' your data will populate automatically.</p>
                     <a class="btn" href="#/reserve">Begin browsing your next reservation</a>
                 </div>
             `
-        } else {
-            // Run validation, encrypt credentials, save to Local Storage
-            signUpForm.addEventListener("submit", signup)
-        }
-
+		} else {
+			// Run validation, encrypt credentials, save to Local Storage
+			signUpForm.addEventListener("submit", signup)
+		}
 	}
 }
 customElements.define("signup-page", SignupPage)
