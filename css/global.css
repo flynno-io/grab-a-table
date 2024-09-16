@@ -45,7 +45,7 @@ nav {
 .nav-logo:hover>img,
 .nav-logo:focus>img,
 .nav-logo.active>img {
-    content: url(/assets//icons/reserved_white.png)
+    content: url(/grab-a-table/assets//icons/reserved_white.png)
 }
 
 .nav-logo>img {
