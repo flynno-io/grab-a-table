@@ -35,7 +35,7 @@ class ConfirmationPage extends HTMLElement {
 			//publish data from local storage as inner HTML
 			userInfo.innerHTML = `
                 <div>
-                    <img class="warning-icon" src="../assets/images/warning.png" alt="warning message" />
+                    <img class="warning-icon" src="/assets/images/warning.png" alt="warning message" />
                     <p class="fs-3 fw-medium">No user data found.</p>
                 </div>
             `

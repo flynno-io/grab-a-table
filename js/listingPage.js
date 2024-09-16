@@ -21,7 +21,7 @@ class ListingPage extends HTMLElement {
 
     // Fetch data using async/await
     async fetchData() {
-        const response = await fetch('../assets/data/listings.json');
+        const response = await fetch('/assets/data/listings.json');
         
         // Handle potential HTTP errors
         if (!response.ok) {
