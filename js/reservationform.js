@@ -1,10 +1,9 @@
 //select variable to select required elements in the reservation form
 const modal = document.querySelector(".modalDialog")
-const reserveButton = document.querySelector(".reserveTable")
 const modalReserveTable = document.querySelector(".modalReserveTable")
 const reserveForm = document.getElementById("userForm")
 const fName = document.querySelector("#name")
-const emailAddress = document.querySelector("#exampleInputEmail1")
+const emailAddress = document.querySelector("#modal-email")
 const date = document.getElementById("dateInput")
 const time = document.getElementById("timeInput")
 const guest = document.getElementById("guest")
@@ -16,6 +15,7 @@ const tableNumber = document.getElementById("randomNumber")
 
 function reserveATable(event) {
 	event.preventDefault()
+
 	if (!fName.value || !emailAddress.value || !result.value) {
 		let element = document.querySelector("#error")
 		element.innerHTML = "All fields are mandatory. Update fields and resubmit"
@@ -56,26 +56,26 @@ function triggerCloseModalButton() {
 	}
 }
 
-modalReserveTable.addEventListener("click", reserveATable)
-
 //function for date picker in the reservation form.
 $(document).ready(function () {
-	$(".datepicker").datepicker({
-		format: "yyyy-mm-dd",
+    $(".datepicker").datepicker({
+        format: "yyyy-mm-dd",
 		autoclose: true,
 		todayHighlight: true,
 	})
 })
 
 function updateDateTime() {
-	const date = document.getElementById("dateInput").value
+    const date = document.getElementById("dateInput").value
 	const time = document.getElementById("timeInput").value
 	const guest = document.getElementById("guest").value
-
+    
 	if (date && time && guest) {
-		const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`
+        const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`
 		document.getElementById("result").value = result
 	} else {
-		alert("Please select date, time and number of guest.")
+        alert("Please select date, time and number of guest.")
 	}
 }
+
+modalReserveTable.addEventListener("click", reserveATable)

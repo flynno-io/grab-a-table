@@ -119,7 +119,6 @@ class LoginPage extends HTMLElement {
             return decryptedCredentials
         }
 
-        console.log(isLoggedIn)
         if (isLoggedIn) {
             const userCredentials = JSON.parse(sessionStorage.getItem('userCredentials'))
             loginContainer.innerHTML = `

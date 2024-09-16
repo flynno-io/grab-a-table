@@ -5,6 +5,39 @@ class ReservePage extends HTMLElement {
 		super()
 	}
 
+    checkThenPopulateForm() {
+
+        function checkIsLoggedIn() {
+            // Retrieve the boolean string from session storage
+            const storedIsLoggedIn = sessionStorage.getItem('isLoggedIn');
+            if (!storedIsLoggedIn) { return false }
+        
+            // Convert the string back to a boolean
+            const isLoggedInBoolean = storedIsLoggedIn === 'true';
+            
+            // set variable on
+            return isLoggedInBoolean
+        }
+        // check if user is logged in
+        const isLoggedIn = checkIsLoggedIn()
+    
+        // if user is logged in, set their form fields for them
+        if (isLoggedIn) {
+            // get reserve form fields
+            const fName = document.querySelector("#name")
+            const emailAddress = document.querySelector("#modal-email")
+
+            // get user credentials from session storage
+            const userCredentials = JSON.parse(sessionStorage.getItem("userCredentials"))
+
+            // set reserve form fields with user data
+            fName.value =`${userCredentials.firstName} ${userCredentials.lastName}`
+            emailAddress.value = userCredentials.email
+        } else {
+            return
+        }
+    }
+
     // Fetch data using async/await
     async fetchData() {
         const response = await fetch('../assets/data/listings.json');
@@ -12,7 +45,6 @@ class ReservePage extends HTMLElement {
         if (!response.ok) {
         throw new Error('Network response was not ok');
         }
-
         return await response.json();
     }
 
@@ -63,6 +95,11 @@ class ReservePage extends HTMLElement {
         } catch (error) {
             this.renderError(error);
         }
+
+        const reserveButtons = document.querySelectorAll(".reservetable")
+        reserveButtons.forEach((btn) => {
+            btn.addEventListener('click', this.checkThenPopulateForm)
+        })
 	}
 
 }
