@@ -16,3 +16,15 @@ signup-page {
 	height: 2rem;
 }
 
+.signup-wrapper:has(.signup-confirmation) {
+    background: white;
+    color: black;
+    max-width: 400px;
+    border: 2px solid darkorange;
+    border-radius: 10px;
+}
+
+.signup-wrapper:has(.signup-confirmation) + p.login-switch {
+    display: none;
+}
+
