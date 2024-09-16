@@ -6,14 +6,14 @@ signup-page {
 }
 
 .signup-wrapper {
-	background: #605856;
-	color: #fff;
+    background: #605856;
+    color: #fff;
     max-width: 350px;
 }
 
 .signup-wrapper .input-box {
-	width: 100%;
-	height: 2rem;
+    width: 100%;
+    height: 2rem;
 }
 
 .signup-wrapper:has(.signup-confirmation) {
@@ -24,7 +24,6 @@ signup-page {
     border-radius: 10px;
 }
 
-.signup-wrapper:has(.signup-confirmation) + p.login-switch {
+.signup-wrapper:has(.signup-confirmation)+p.login-switch {
     display: none;
 }
-

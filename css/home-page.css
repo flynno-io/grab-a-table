@@ -1,7 +1,8 @@
 /* css/home-page.css */
 
 /*///// CAROUSEL /////*/
-.carousel, .carousel-inner {
+.carousel,
+.carousel-inner {
     height: 100%;
     width: 100%;
 }
@@ -20,7 +21,7 @@
     font-size: 1.4rem !important;
 }
 
-div.carousel-caption>p.carousel-description  {
+div.carousel-caption>p.carousel-description {
     font-size: 1rem !important;
 }
 
@@ -44,7 +45,8 @@ section.tutorial>.container {
 }
 
 .tutorial .container svg.step-icon>path {
-    fill: #274156; /* charcoal */
+    fill: #274156;
+    /* charcoal */
 }
 
 /*///// CUSTOMER REVIEWS /////*/
@@ -59,7 +61,7 @@ section.tutorial>.container {
 
 .reviews>.card>.card-body>blockquote {
     font-style: italic;
-    color: #032D3C; 
+    color: #032D3C;
 }
 
 .quotations {
@@ -67,7 +69,8 @@ section.tutorial>.container {
 }
 
 svg.quotations>path {
-    fill: #274156; /* charcoal */
+    fill: #274156;
+    /* charcoal */
 }
 
 .quotations.left {
@@ -100,8 +103,8 @@ svg.quotations>path {
     }
 }
 
-/* For devices ≥768px */ 
-@media (min-width: 768px) { 
+/* For devices ≥768px */
+@media (min-width: 768px) {
     .carousel-caption {
         left: 20%;
         right: 20%;
@@ -141,7 +144,7 @@ svg.quotations>path {
     .carousel-caption>h5 {
         font-size: 1.5rem
     }
-    
+
     .carousel-caption>p {
         font-size: 1.15rem;
     }
