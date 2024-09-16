@@ -14,8 +14,32 @@ const tableNumber = document.getElementById("randomNumber")
 //function to grab the entries in the reservation form and save it in local storage. 
 // The function also shows an error if the user has left any field blank.
 
+function checkIsLoggedIn() {
+    // Retrieve the boolean string from session storage
+    const storedIsLoggedIn = sessionStorage.getItem('isLoggedIn');
+    if (!storedIsLoggedIn) { return false }
+
+    // Convert the string back to a boolean
+    const isLoggedInBoolean = storedIsLoggedIn === 'true';
+    
+    // set variable on
+    return isLoggedInBoolean
+}
+
 function reserveATable(event) {
 	event.preventDefault()
+
+    // check if user is logged in
+    const isLoggedIn = checkIsLoggedIn()
+
+    // if user is logged in, set their form fields for them
+    if (isLoggedIn) {
+        const userCredentials = JSON.parse(sessionStorage.getItem("userCredentials"))
+        console.log(userCredentials)
+        fName.value =`${userCredentials.firstName} ${userCredentials.lastName}`
+        emailAddress.value = userCredentials.email
+    }
+
 	if (!fName.value || !emailAddress.value || !result.value) {
 		let element = document.querySelector("#error")
 		element.innerHTML = "All fields are mandatory. Update fields and resubmit"
@@ -56,26 +80,26 @@ function triggerCloseModalButton() {
 	}
 }
 
-modalReserveTable.addEventListener("click", reserveATable)
-
 //function for date picker in the reservation form.
 $(document).ready(function () {
-	$(".datepicker").datepicker({
-		format: "yyyy-mm-dd",
+    $(".datepicker").datepicker({
+        format: "yyyy-mm-dd",
 		autoclose: true,
 		todayHighlight: true,
 	})
 })
 
 function updateDateTime() {
-	const date = document.getElementById("dateInput").value
+    const date = document.getElementById("dateInput").value
 	const time = document.getElementById("timeInput").value
 	const guest = document.getElementById("guest").value
-
+    
 	if (date && time && guest) {
-		const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`
+        const result = `Date: ${date}, Time: ${time}, Guest: ${guest}`
 		document.getElementById("result").value = result
 	} else {
-		alert("Please select date, time and number of guest.")
+        alert("Please select date, time and number of guest.")
 	}
 }
+
+modalReserveTable.addEventListener("click", reserveATable)
