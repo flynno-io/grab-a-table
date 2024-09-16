@@ -1,6 +1,6 @@
 # Grab a Table
 
-![Screenshot of Grab a Table Home Page](/grab-a-table/assets/images/home-screenshot.png)
+![Screenshot of Grab a Table Home Page](/assets/images/home-screenshot.png)
 
 ## Description
 Grab a table is a restaurant listing app that allows users to find and reserve a table at a participating local restaurant.
