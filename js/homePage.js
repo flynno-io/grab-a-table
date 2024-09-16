@@ -20,7 +20,7 @@ class HomePage extends HTMLElement {
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="/assets/images/sun_bathed_restaurant.jpeg" class="d-block w-100" alt="Sun-bathed restaurant">
+                            <img src="/grab-a-table/assets/images/sun_bathed_restaurant.jpeg" class="d-block w-100" alt="Sun-bathed restaurant">
                             <div class="carousel-caption text-start mb-2 p-3 rounded-2">
                                 <h5 class="carousel-item-h5 fs-4">Reserve a table</h5>
                                 <p class="carousel-description fs-5 fw-light">Review, reserve, and relax before your next meal out.</p>
@@ -28,7 +28,7 @@ class HomePage extends HTMLElement {
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="/assets/images/family_dinner.jpeg" class="d-block w-100" alt="Family night out for dinner">
+                            <img src="../assets/images/family_dinner.jpeg" class="d-block w-100" alt="Family night out for dinner">
                             <div class="carousel-caption text-start mb-2 p-3 rounded-2">
                                 <h5 class="carousel-item-h5 fs-4">A table for family</h5>
                                 <p class="carousel-description fs-5 fw-light">Find restaurants that are perfect for your next family outing.</p>
