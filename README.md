@@ -16,7 +16,7 @@ Features
 9) Login – Allows users to sign in as a member and access member exclusive features such as pre-populate member details in the table reservation form.
 
 ## Installation
-Grab a Table is a web-based application accessible from [[https://flynno-io.github.io/grab-a-table/#/home](https://flynno-io.github.io/grab-a-table/#/home)]
+Grab a Table is a web-based application accessible from [https://flynno-io.github.io/grab-a-table/#/home](https://flynno-io.github.io/grab-a-table/#/home)
 
 ## Usage
 1. Users can access the Website Menu from the top right corner of the website. It allows users to access the following features:
