@@ -1,0 +1,20 @@
+/* css/signup-page.css */
+
+signup-page {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-wrapper {
+	width: 420px;
+	background: #605856;
+	color: #fff;
+	border-radius: 10px;
+	padding: 30px 40px;
+}
+
+.signup-wrapper .input-box {
+	width: 100%;
+	height: 2rem;
+}
+
