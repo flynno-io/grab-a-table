@@ -37,7 +37,7 @@ class ListingPage extends HTMLElement {
                 <div class="container-fluid text-center">
                     <div class="row">
                         <div class="my-4 p-0 col-lg-6 col-md-12 col-sm-12">
-                            <img src="${listingObj.logo}" class="w-50" alt="Taco Guild img">
+                            <img src="${listingObj.logo}" class="w-50" alt="${listingObj.altText}">
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 align-self-center">
                             <h1 class="display-1 fw-bold text-left">${listingObj.name} </h1>
