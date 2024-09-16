@@ -1,15 +1,23 @@
-/* styles.css */
+/* css/global.css */
 
 :root {
-    --bs-primary: #ff5733; /* Changing primary color to a custom orange */
-    --bs-secondary: #6c757d; /* Custom secondary color */
-    --bs-success: #28a745; /* Custom success color */
-    --bs-info: #17a2b8; /* Custom info color */
-    --bs-warning: #ffc107; /* Custom warning color */
-    --bs-danger: #dc3545; /* Custom danger color */
-    --bs-light: #f8f9fa; /* Custom light color */
-    --bs-dark: #343a40; /* Custom dark color */
-  }
+    --bs-primary: #FF8C00 !important;
+    /* Changing primary color to a dark orange */
+    --bs-secondary: #6c757d !important;
+    /* Custom secondary color */
+    --bs-success: #28a745 !important;
+    /* Custom success color */
+    --bs-info: #17a2b8 !important;
+    /* Custom info color */
+    --bs-warning: #ffc107 !important;
+    /* Custom warning color */
+    --bs-danger: #dc3545 !important;
+    /* Custom danger color */
+    --bs-light: #f8f9fa !important;
+    /* Custom light color */
+    --bs-dark: #343a40 !important;
+    /* Custom dark color */
+}
 
 /*///// GLOBAL STYLES /////*/
 * {
@@ -18,7 +26,7 @@
 
 /*///// HEADER /////*/
 nav {
-    background-color: darkorange !important;
+    background-color: #FF8C00 !important;
 }
 
 /*///// NAVBAR LOGO /////*/
@@ -47,10 +55,15 @@ nav {
 }
 
 /*///// NAVBAR LINKS /////*/
+
+.navbar {
+    font-size: 1.15rem;
+}
+
 a.nav-link {
     cursor: pointer;
-    margin: .5rem;
-    padding: 0 .25rem;
+    margin: .75rem;
+    line-height: 1.2;
 }
 
 .nav-link:hover,
@@ -63,8 +76,40 @@ a.nav-link.active {
 
 main {
     width: 100vw;
+    min-height: 100vh;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: #F5F5F5; */
 }
+
+/*///// FOOTER /////*/
+
+a.footer-icon>img {
+    width: 2.4rem;
+    margin-right: .5rem;
+}
+
+/*///// COMPONENT STYLES /////*/
+
+.btn {
+    background-color: #BBBDF6;
+    /* Periwinkle */
+    border-color: #BBBDF6;
+    /* Periwinkle */
+    color: black;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: darkorange;
+    /* Periwinkle */
+    border-color: darkorange;
+    /* Periwinkle */
+    color: white;
+}
+
+/*///// MEDIA QUERIES /////*/
 
 /* For devices ≥576px */
 @media (min-width: 576px) {
@@ -75,14 +120,10 @@ main {
 
 /* For devices ≥768px */
 @media (min-width: 768px) {
-    .custom-class {
-        background-color: lightgreen;
-    }
+    /* insert styles */
 }
 
 /* For devices ≥992px */
 @media (min-width: 992px) {
-    .custom-class {
-        background-color: lightcoral;
-    }
+    /* insert styles */
 }

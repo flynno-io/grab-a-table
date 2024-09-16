@@ -1,0 +1,9 @@
+/* css/listing-page.css */
+
+dl>dt {
+    width: 30%;
+}
+
+dl>dd {
+    width: 70%;
+}

@@ -1,0 +1,21 @@
+/* css/listing-card.css */
+
+listing-card {
+    height: 100%;
+}
+
+.listing.card>img {
+    height: 10rem;
+    object-fit: contain;
+}
+
+.listing.card>.card-body>p {
+    width: 95%;
+    height: 8.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: normal;
+}

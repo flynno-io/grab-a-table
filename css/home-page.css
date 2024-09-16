@@ -1,23 +1,157 @@
+/* css/home-page.css */
 
-.carousel, .carousel-inner {
+/*///// CAROUSEL /////*/
+.carousel,
+.carousel-inner {
     height: 100%;
     width: 100%;
 }
 
 .carousel-item>img {
-    height: 400px;
+    height: 30rem;
     width: 100%;
     object-fit: cover;
 }
 
 .carousel-caption {
-    text-align: left;
-    padding: 10px 20px;
     background-color: rgb(24, 28, 20, 0.6);
-    border-radius: 5px;
-    margin-bottom: 1rem
 }
 
-.carousel-indicators {
-    bottom: 0;
+.carousel-caption>h5.carousel-item-h5 {
+    font-size: 1.4rem !important;
+}
+
+div.carousel-caption>p.carousel-description {
+    font-size: 1rem !important;
+}
+
+/*///// HERO TITLE /////*/
+.hero-title {
+    border-bottom: 4px solid darkorange;
+}
+
+/*///// TUTORIAL CONTAINER & CARDS /////*/
+section.tutorial>.container {
+    flex: 1 2 300px;
+    height: 200px;
+}
+
+.tutorial>h2 {
+    flex: 2 1 200px;
+}
+
+.tutorial .container svg.step-icon {
+    width: 4rem;
+}
+
+.tutorial .container svg.step-icon>path {
+    fill: #274156;
+    /* charcoal */
+}
+
+/*///// CUSTOMER REVIEWS /////*/
+
+.customer-reviews>h2 {
+    border-bottom: 4px solid darkorange;
+}
+
+.reviews>.card {
+    flex: 1 1 100px;
+}
+
+.reviews>.card>.card-body>blockquote {
+    font-style: italic;
+    color: #032D3C;
+}
+
+.quotations {
+    width: 30px;
+}
+
+svg.quotations>path {
+    fill: #274156;
+    /* charcoal */
+}
+
+.quotations.left {
+    align-self: flex-start;
+}
+
+.reviewer-info {
+    font-style: italic;
+    color: #605856;
+    display: flex;
+}
+
+.reviewer-name:before {
+    content: "-";
+    padding-right: .5rem;
+}
+
+.reviewer-city {
+    padding-left: 1rem;
+    display: inline;
+}
+
+/*///// MEDIA QUERIES /////*/
+
+/* For devices ≥576px */
+@media (min-width: 576px) {
+    .tutorial>h2 {
+        flex: 2 1 100%;
+        text-align: center;
+    }
+}
+
+/* For devices ≥768px */
+@media (min-width: 768px) {
+    .carousel-caption {
+        left: 20%;
+        right: 20%;
+    }
+
+    .tutorial>h2 {
+        text-align: center;
+    }
+
+    .tutorial .container {
+        flex: 1 2 50%;
+    }
+
+    .tutorial>.container>.step-text {
+        font-size: 1.10rem !important;
+    }
+
+}
+
+/* For devices ≥992px */
+@media (min-width: 992px) {
+    .carousel-caption {
+        left: 30%;
+        right: 30%;
+        max-width: 600px;
+    }
+}
+
+/* For devices ≥1200px */
+@media (min-width: 1200px) {
+    .carousel-caption {
+        left: 35%;
+        right: 35%;
+        padding: 20px;
+    }
+
+    .carousel-caption>h5 {
+        font-size: 1.5rem
+    }
+
+    .carousel-caption>p {
+        font-size: 1.15rem;
+    }
+
+    .tutorial>h2 {
+        flex: 2 1 30%;
+        text-align: center;
+    }
+
 }
