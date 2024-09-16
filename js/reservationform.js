@@ -1,27 +1,19 @@
 
 //select variable to select required elements in the reservation form
-const modal = document.querySelector(".modal-dialog");
-const reservebutton = document.querySelector(".reservetable");
-const modalreservetable = document.querySelector(".modalreservetable");
-const reserveform = document.getElementById("userForm");
-const fname = document.querySelector("#name");
-const emailaddress = document.querySelector("#exampleInputEmail1");
-const selecteddatetime = document.querySelector("#result");
-const tablenumber = document.getElementById("randomNumber");
-
-
-
-
-//
-/* reservebutton.onclick = function() {
-    modal.style.display = "block";
-} */
+const modal = document.querySelector(".modalDialog");
+const reserveButton = document.querySelector(".reserveTable");
+const modalReserveTable = document.querySelector(".modalReserveTable");
+const reserveForm = document.getElementById("userForm");
+const fName = document.querySelector("#name");
+const emailAddress = document.querySelector("#exampleInputEmail1");
+const selectedDateTime = document.querySelector("#result");
+const tableNumber = document.getElementById("randomNumber");
 
 //function to grab the entries in the reservation form and save it in local storage. The function also shows an error if the user has left any field blank.
 
-function reserveatable(event) {
+function reserveaTable(event) {
     event.preventDefault();
-    if (!fname.value || !emailaddress.value || !result.value) {
+    if (!fName.value || !emailAddress.value || !result.value) {
         let element = document.querySelector ('#error');
         element.innerHTML = "All fields are mandatory. Update fields and resubmit";
         element.style = "color:red";
@@ -37,31 +29,25 @@ function reserveatable(event) {
     };
     localStorage.setItem("userData", JSON.stringify(userData));
 
-    
+    // Clear form and Trigger the close modal button
+    triggerCloseModalButton();
 
-     // Trigger the close modal button
-     triggerCloseModalButton();
-
-    /* window.location.href = "confirmationPage.html"; */
     window.location.hash = "#/confirmation"
-
     
-      
 }
 
-    // Function to close the modal
-    function triggerCloseModalButton() {
-        const closeButton = document.querySelector('.modalclose');
+// Function to close the modal
+function triggerCloseModalButton() {
+    const closeButton = document.querySelector('.modalClose');
         if (closeButton) {
           closeButton.click();
         } else {
           console.error('Close modal button not found');
         }
-      }
+}
 
 
-modalreservetable.addEventListener('click', reserveatable);
-
+modalReserveTable.addEventListener('click', reserveaTable);
 
 //function for date picker in the reservation form.
 $(document).ready(function(){
