@@ -95,32 +95,32 @@ class ListingPage extends HTMLElement {
                             <div class="carousel-inner width=50rem">
                                 <div class="carousel-item active">
                                     <img src="${listingObj.carousel1}" class="d-block w-100">
-                                    <div class="carousel-caption m-3 p-3">
-                                        <p class="text-center m-3 p-3">${listingObj.caption}<p>
+                                    <div class="carousel-caption m-2 p-2">
+                                        <p class="text-center m-2 p-2">${listingObj.caption}<p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="${listingObj.carousel2}" class="d-block w-100">
-                                    <div class="carousel-caption m-3 p-3">
-                                        <p class="text-center m-3 p-3">${listingObj.caption2}</p>
+                                    <div class="carousel-caption m-2 p-2">
+                                        <p class="text-center m-2 p-2">${listingObj.caption2}</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="${listingObj.carousel3}" class="d-block w-100">
-                                    <div class="carousel-caption m-3 p-3">
-                                        <p class="text-center m-3 p-3">${listingObj.caption3}</p>
+                                    <div class="carousel-caption m-2 p-2">
+                                        <p class="text-center m-2 p-2">${listingObj.caption3}</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="${listingObj.carousel4}" class="d-block w-100">
-                                    <div class="carousel-caption m-3 p-3">
-                                        <p class="text-center m-3 p-3">${listingObj.caption4}</p>
+                                    <div class="carousel-caption m-2 p-2">
+                                        <p class="text-center m-2 p-2">${listingObj.caption4}</p>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <img src="${listingObj.carousel5}" class="d-block w-100">
-                                    <div class="carousel-caption m-3 p-3">
-                                        <p class="text-center m-3 p-3">${listingObj.caption5}</p>
+                                    <div class="carousel-caption m-2 p-2">
+                                        <p class="text-center m-2 p-2">${listingObj.caption5}</p>
                                     </div>
                                 </div>
                             </div>
