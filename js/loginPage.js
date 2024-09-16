@@ -5,106 +5,25 @@ class LoginPage extends HTMLElement {
 		super()
 	}
 
-    static css = `
- * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-    }
-
- section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: gray;
-    }
-    
-    .wrapper{
-    width: 420px;
-    background: orange;
-    color: #fff;
-    border-radius: 10px;
-    padding: 30px 40px;
-    } 
-    .wrapper h1 {
-    font-size: 30px;
-    text-align: center;
-    }
-
-    .wrapper .input-box {
-    width: 100%;
-    height: 50px;
-    background: orange;
-    }
-
-    .input-box input {
-    width: 100%;
-    height:100%;
-    background: transparent;
-    border:none;
-    outline: none;
-    border: 2px solid gray;
-    border-radius: 40px;
-    font-size: 16px;
-    color:black;
-    padding: 20px 45px 20px 20px;
-    }
-
-    .input-box input::placeholder {
-    color: black;
-    }
-
-    .input-box i {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform:translateY(-50%);
-    font-size: 20px;
-    }
-    .wrapper .btn {
-    width: 100%;
-    height: 45px;
-    background: white;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px black;
-    cursor: pointer;
-    font-size: 15px;
-    color: black;
-    font-weight: 600;
-    }
-
-    `
-
     render() {
         this.innerHTML = `
-            <style>${LoginPage.css}</style>
-            
-            <section>
-            <body>
-            <div class="wrapper">
-            <form action="">
-            <h1> Login </h1>
-            <div class="input-box">
-            <input type="text" placeholder="Username" >
-            </div>
-            <div class="input-box">
-            <input type="email" placeholder="Email">
-            </div>
-           <div class="input-box">
-            <input type="Password" placeholder="Password" >
-            </div>
-            <button type="submit" class="btn">Login</button>
- 
-            </form>
-
-            </body>
-          
-
-   
+            <section class="container-fluid m-5 h-50 d-flex justify-content-center align-items-center">
+                <div class="login-wrapper px-5 py-4 d-flex w-60 h-60">
+                    <form class="w-100 h-100 m-2 d-flex flex-column flex-nowrap justify-content-around gap-2"action="">
+                        <h1 class="fw-bold fs-1 m-0 p-0 text-center">Login</h1>
+                        <p class="mx-4 my-2 text-center lh-1">Sign in to schedule your next restaurant reservation</p>
+                        <div class="input-box my-1">
+                            <input class="w-100 h-100 ps-3 rounded-1 border-0" type="text" placeholder="Username" required>
+                        </div>
+                        <div class="input-box my-1">
+                            <input class="w-100 h-100 ps-3 rounded-1 border-0" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="input-box my-1">
+                            <input class="w-100 h-100 ps-3 rounded-1 border-0" type="Password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                    </form>
+                </div>
             </section>
         `
     }
