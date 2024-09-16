@@ -38,12 +38,18 @@ function reserveaTable(event) {
 
 // Function to close the modal
 function triggerCloseModalButton() {
+    document.getElementById("name").value = ''
+    document.getElementById("exampleInputEmail1").value = ''
+    document.getElementById("dateInput").value = ''
+    document.getElementById("timeInput").value = ''
+    document.getElementById("guest").value = ''
+    document.getElementById("result").value = ''
     const closeButton = document.querySelector('.modalClose');
-        if (closeButton) {
-          closeButton.click();
-        } else {
-          console.error('Close modal button not found');
-        }
+    if (closeButton) {
+        closeButton.click();
+    } else {
+        console.error('Close modal button not found');
+    }
 }
 
 
