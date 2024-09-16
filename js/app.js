@@ -17,6 +17,7 @@ let currentActiveTab = document.querySelector(".active")
 // ***
 
 function navigateToHash(hash) {
+    console.log(hash)
 	const loginPattern = /^#\/login$/
 	const signupPattern = /^#\/signup$/
 	const reservePattern = /^#\/reserve$/
@@ -89,6 +90,7 @@ function loadPage(page, id = null) {
 			updateBrowserHistory("home")
 			break
 		default: // catch all hashes that don't exist and #/404
+            console.log('Page Not Found')
 			addActiveClass()
 			appendPageToContainer("notfound-page")
 			updateURL("404")
@@ -131,11 +133,11 @@ function updateURL(path) {
 		const protocol = window.location.protocol
 		const hostname = window.location.hostname
 		const port = window.location.port ? `:${window.location.port}` : ""
-		return `${protocol}//${hostname}${port}`
+		return `${protocol}//${hostname}${port}/grab-a-table` // !!! Github requires the name of the repo as the first section of the path !!!
 	}
 	const baseURL = getBaseURL()
-	window.history.pushState({}, "", `${baseURL}/#/${path}`) // Update code to work with #/listing/{id}
-	// load the web component page at the top
+	window.history.pushState({}, "", `${baseURL}/#/${path}`)
+	// load the web component page at the top of the page
 	window.scrollTo({
 		top: 0,
 		left: 0,
@@ -157,6 +159,7 @@ function updateBrowserHistory(page) {
 // ***
 
 window.addEventListener("load", () => {
+    console.log(window.location)
 	const hash = window.location.hash // Get the current URL hash
 	if (hash) {
 		// Process the hash (e.g., navigate to the correct path)
