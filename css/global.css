@@ -89,7 +89,7 @@ a.footer-icon>img {
     color: black;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
     background-color: darkorange; /* Periwinkle */
     border-color: darkorange; /* Periwinkle */
     color: white;

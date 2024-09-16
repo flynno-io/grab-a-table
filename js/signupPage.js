@@ -83,27 +83,27 @@ class SignupPage extends HTMLElement {
         this.innerHTML = `
             <style>${SignupPage.css}</style>
             <section>
-             <body>
-             <div class="wrapper">
-            <form action="">
-            <h1> Signup </h1>
-            <div class="input-box">
-            <input type="text" placeholder="Username" id="username1">
-            </div>
-            <div class="input-box">
-            <input type="email" placeholder="Email" id="email1">
-            </div>
-           <div class="input-box">
-            <input type="Password" placeholder="Password" id="password1">
-            </div>
-             <div class="input-box">
-            <input type="Password" placeholder="Repeat Password" >
-            </div>
-            <button type="submit" class="btn">Signup</button>
-            </form>
-            </div>
-            </div>
-            </body>
+                <body>
+                <div class="wrapper">
+                <form action="">
+                <h1> Signup </h1>
+                <div class="input-box">
+                <input type="text" placeholder="Username" id="signup-username">
+                </div>
+                <div class="input-box">
+                <input type="email" placeholder="Email" id="signup-email">
+                </div>
+                <div class="input-box">
+                <input type="Password" placeholder="Password" id="signup-password">
+                </div>
+                <div class="input-box">
+                <input type="Password" placeholder="Repeat Password" >
+                </div>
+                <button type="submit" class="btn">Signup</button>
+                </form>
+                </div>
+                </div>
+                </body>
             </section>
         `
     }
@@ -112,35 +112,31 @@ class SignupPage extends HTMLElement {
         this.render()
 
         //select variable to select required elements in the reservation form
-        const Username = document.querySelector("#username1");
-        const email = document.querySelector("#email1");
-        const pass = document.querySelector("#password1");
+        const username = document.querySelector("#signup-username");
+        const email = document.querySelector("#signup-email");
+        const password = document.querySelector("#signup-password");
         const signupButton = document.querySelector(".btn");
 
-        // TODO: update code to meet Javascript naming conventions and remove unused code.
-        //function to grab the entries in the reservation form and save it in local storage. The function also shows an error if the user has left any field blank.
+        console.log(signupButton)
 
         function signup(event) {
             event.preventDefault();
-            if (!Username.value || !email.value || !pass.value) { // FIXME: updated 'result' to correct element being selectdatatime
-            //   let element = document.querySelector ('#error');
-            //   element.innerHTML = "All fields are mandatory. Update fields and resubmit";
-            //   element.style = "color:red";
-            //  return;
-            //    }
-            const signupData = {
-                username: document.getElementById("username1").value,
-                email: document.getElementById("email1").value,
-                password: document.getElementById("pass1").value,
+            if (!username.value || !email.value || !password.value) {
+                alert('Please add all required information!')
+                return
+            }
+            const userCredentials = {
+                username: username.value,
+                email: email.value,
+                password: password.value
             };
-            localStorage.setItem("signupData", JSON.stringify(signupData));
-            // window.location.href = "reservationconfirmation.html";
-        //window.location.hash = "#/confirmation"
-
-
-            }   
+            localStorage.setItem("userCredentials", JSON.stringify(userCredentials));
         }
         signupButton.addEventListener('click', signup);
+    }
+
+    disconnectedCallback() {
+        signupButton.removeEventListener('click', signup);
     }
 }
 customElements.define("signup-page", SignupPage)
