@@ -127,8 +127,18 @@ class LoginPage extends HTMLElement {
                     <h1>${userCredentials.firstName}, you are logged in.</h1>
                     <p>When you click on 'Reserve a Table' your data will populate automatically.</p>
                     <a class="btn" href="#/reserve">Begin browsing your next reservation</a>
+                    <p id="logout"><a href="#/login">Log out</a></p>
                 </div>
             `
+
+            // Get logout button and add 'logout' function to it
+            const logout = document.getElementById("logout")
+            logout.addEventListener('click', () => {
+                sessionStorage.setItem('isLoggedIn', false.toString())
+                sessionStorage.removeItem('userCredentials')
+                window.location.reload(true)
+            })
+
         } else {
             // Run validation, encrypt credentials, save to Local Storage
             loginForm.addEventListener("submit", signup)
