@@ -13,7 +13,7 @@ Features
 6) View restaurant – Allows users to view profile page of the restaurant.
 7) Reserve table - Allows users to share inputs needed to reserve a table in a restaurant and view confirmation for every successful reservation.
 8) Sign Up – Allows users to sign up as a member of Grab a Table.
-9) Login – Allows users to sign in as a member and access member exclusive features.
+9) Login – Allows users to sign in as a member and access member exclusive features such as pre-populate member details in the table reservation form.
 
 ## Installation
 Grab a Table is a web-based application accessible from [enter github URL]
