@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     object-fit: contain;
-    background-image: url(../assets/images/empty_restaurant.jpeg);
+    background-image: url(/assets/images/empty_restaurant.jpeg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
