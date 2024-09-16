@@ -29,10 +29,17 @@ function reserveaTable(event) {
     };
     localStorage.setItem("userData", JSON.stringify(userData));
 
-    // Clear form and Trigger the close modal button
+    // Trigger the close modal button
     triggerCloseModalButton();
 
     window.location.hash = "#/confirmation"
+  
+}
+
+//Function to clear the form
+
+function clearForm() {
+    document.getElementById('exampleModal').reset();
     
 }
 
@@ -45,7 +52,6 @@ function triggerCloseModalButton() {
           console.error('Close modal button not found');
         }
 }
-
 
 modalReserveTable.addEventListener('click', reserveaTable);
 
