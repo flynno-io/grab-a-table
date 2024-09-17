@@ -48,7 +48,7 @@ class HomePage extends HTMLElement {
                             <div class="carousel-caption text-start mb-2 p-3 rounded-2">
                                 <h5 class="carousel-item-h5 fs-4">Reserve in advance</h5>
                                 <p class="carousel-description fs-5 fw-light">Book a table up to 3 weeks in advance so you can plan ahead. </p>
-                                <a class="btn btn-primary" href="#/reserve">Reserve a Table</a>
+                                <a class="btn btn-primary" href="#/signup">Sign Up</a>
                             </div>
                         </div>
                         <div class="carousel-item">

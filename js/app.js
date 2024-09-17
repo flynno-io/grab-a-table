@@ -154,6 +154,15 @@ function updateBrowserHistory(page) {
 	window.history.pushState({ page: page }, capitalize(page), `#/${page}`) // TODO: read up more on the history -> pushState method.
 }
 
+// Set the min date for the DatePicker to tomorrow -> today() + 1
+function getMinDate() {
+    let today = new Date()
+    today.setDate(today.getDate() + 1)
+    let tomorrow = today.toISOString().split('T')[0]
+    document.getElementById('dateInput').setAttribute('min', tomorrow)
+}
+getMinDate()
+
 // ***
 // WINDOW & DOCUMENT EVENT LISTENERS //
 // ***
