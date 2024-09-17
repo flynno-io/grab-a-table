@@ -58,15 +58,6 @@ function triggerCloseModalButton() {
 	}
 }
 
-//function for date picker in the reservation form.
-$(document).ready(function () {
-	$(".datepicker").datepicker({
-		format: "yyyy-mm-dd",
-		autoclose: true,
-		todayHighlight: true,
-	})
-})
-
 function updateDateTime() {
 	const date = document.getElementById("dateInput").value
 	const time = document.getElementById("timeInput").value
