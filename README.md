@@ -1,6 +1,6 @@
 # Grab a Table
 
-![Screenshot of Grab a Table Home Page](/grab-a-table/assets/images/home-screenshot.png)
+![Screenshot of Grab a Table Home Page](/assets/images/home-screenshot.png)
 
 ## Description
 Grab a table is a restaurant listing app that allows users to find and reserve a table at a participating local restaurant.
@@ -16,7 +16,7 @@ Features
 9) Login – Allows users to sign in as a member and access member exclusive features such as pre-populate member details in the table reservation form.
 
 ## Installation
-Grab a Table is a web-based application accessible from [enter github URL]
+Grab a Table is a web-based application accessible from [https://flynno-io.github.io/grab-a-table/#/home](https://flynno-io.github.io/grab-a-table/#/home)
 
 ## Usage
 1. Users can access the Website Menu from the top right corner of the website. It allows users to access the following features:
